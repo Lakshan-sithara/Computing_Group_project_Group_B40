@@ -30,12 +30,12 @@
         {
             panel1 = new Panel();
             panel3 = new Panel();
-            button2 = new Button();
-            linkLabel1 = new LinkLabel();
-            button1 = new Button();
+            showPass = new CheckBox();
+            RegBtn = new Button();
+            signInBtn = new Button();
             label7 = new Label();
-            textBox4 = new TextBox();
-            textBox1 = new TextBox();
+            password = new TextBox();
+            userName = new TextBox();
             label3 = new Label();
             label1 = new Label();
             panel2 = new Panel();
@@ -56,92 +56,101 @@
             panel1.BackColor = Color.FromArgb(4, 13, 60);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(57, 37);
+            panel1.Location = new Point(65, 49);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(622, 395);
+            panel1.Size = new Size(711, 527);
             panel1.TabIndex = 2;
             // 
             // panel3
             // 
             panel3.BackColor = Color.PowderBlue;
-            panel3.Controls.Add(button2);
-            panel3.Controls.Add(linkLabel1);
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(showPass);
+            panel3.Controls.Add(RegBtn);
+            panel3.Controls.Add(signInBtn);
             panel3.Controls.Add(label7);
-            panel3.Controls.Add(textBox4);
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(password);
+            panel3.Controls.Add(userName);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label1);
-            panel3.Location = new Point(332, 37);
+            panel3.Location = new Point(379, 49);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(261, 322);
+            panel3.Size = new Size(298, 429);
             panel3.TabIndex = 2;
             // 
-            // button2
+            // showPass
             // 
-            button2.BackColor = Color.MidnightBlue;
-            button2.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(70, 262);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 32);
-            button2.TabIndex = 13;
-            button2.Text = "REGISTER";
-            button2.UseVisualStyleBackColor = false;
+            showPass.AutoSize = true;
+            showPass.Location = new Point(150, 235);
+            showPass.Name = "showPass";
+            showPass.Size = new Size(132, 24);
+            showPass.TabIndex = 14;
+            showPass.Text = "Show Password";
+            showPass.UseVisualStyleBackColor = true;
+            showPass.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // linkLabel1
+            // RegBtn
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(27, 183);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(127, 15);
-            linkLabel1.TabIndex = 12;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Forgot your password?";
+            RegBtn.BackColor = Color.MidnightBlue;
+            RegBtn.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            RegBtn.ForeColor = Color.White;
+            RegBtn.Location = new Point(80, 349);
+            RegBtn.Margin = new Padding(3, 4, 3, 4);
+            RegBtn.Name = "RegBtn";
+            RegBtn.Size = new Size(154, 43);
+            RegBtn.TabIndex = 13;
+            RegBtn.Text = "REGISTER";
+            RegBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // signInBtn
             // 
-            button1.BackColor = Color.MidnightBlue;
-            button1.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(70, 221);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 32);
-            button1.TabIndex = 11;
-            button1.Text = "SIGN IN";
-            button1.UseVisualStyleBackColor = false;
+            signInBtn.BackColor = Color.MidnightBlue;
+            signInBtn.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            signInBtn.ForeColor = Color.White;
+            signInBtn.Location = new Point(80, 295);
+            signInBtn.Margin = new Padding(3, 4, 3, 4);
+            signInBtn.Name = "signInBtn";
+            signInBtn.Size = new Size(154, 43);
+            signInBtn.TabIndex = 11;
+            signInBtn.Text = "SIGN IN";
+            signInBtn.UseVisualStyleBackColor = false;
+            signInBtn.Click += signInBtn_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(27, 122);
+            label7.Location = new Point(31, 163);
             label7.Name = "label7";
-            label7.Size = new Size(103, 16);
+            label7.Size = new Size(78, 22);
             label7.TabIndex = 10;
-            label7.Text = "Confirm password";
+            label7.Text = "Password";
+            label7.Click += label7_Click;
             // 
-            // textBox4
+            // password
             // 
-            textBox4.Location = new Point(27, 144);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(220, 23);
-            textBox4.TabIndex = 9;
+            password.Location = new Point(31, 192);
+            password.Margin = new Padding(3, 4, 3, 4);
+            password.Name = "password";
+            password.Size = new Size(251, 27);
+            password.TabIndex = 9;
             // 
-            // textBox1
+            // userName
             // 
-            textBox1.Location = new Point(27, 84);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(220, 23);
-            textBox1.TabIndex = 6;
+            userName.Location = new Point(31, 112);
+            userName.Margin = new Padding(3, 4, 3, 4);
+            userName.Name = "userName";
+            userName.Size = new Size(251, 27);
+            userName.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(27, 63);
+            label3.Location = new Point(31, 84);
             label3.Name = "label3";
-            label3.Size = new Size(148, 16);
+            label3.Size = new Size(194, 22);
             label3.TabIndex = 3;
             label3.Text = "User Name (Index Number)\r\n";
             // 
@@ -149,9 +158,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(101, 16);
+            label1.Location = new Point(115, 21);
             label1.Name = "label1";
-            label1.Size = new Size(66, 23);
+            label1.Size = new Size(84, 29);
             label1.TabIndex = 0;
             label1.Text = "SIGN IN";
             // 
@@ -162,8 +171,9 @@
             panel2.Controls.Add(pictureBox2);
             panel2.ForeColor = Color.White;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(305, 395);
+            panel2.Size = new Size(349, 527);
             panel2.TabIndex = 1;
             // 
             // label5
@@ -171,9 +181,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(67, 258);
+            label5.Location = new Point(77, 344);
             label5.Name = "label5";
-            label5.Size = new Size(181, 20);
+            label5.Size = new Size(228, 24);
             label5.TabIndex = 3;
             label5.Text = "THE TEURLINGS COLLAGE";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -182,9 +192,10 @@
             // 
             pictureBox2.BackgroundImageLayout = ImageLayout.None;
             pictureBox2.Image = Properties.Resources.TCHS_primary_crest_FC;
-            pictureBox2.Location = new Point(68, 73);
+            pictureBox2.Location = new Point(78, 97);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(176, 172);
+            pictureBox2.Size = new Size(201, 229);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -196,39 +207,43 @@
             panel4.Controls.Add(label4);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 0);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(737, 28);
+            panel4.Size = new Size(842, 37);
             panel4.TabIndex = 5;
             // 
             // button7
             // 
             button7.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.Location = new Point(711, 2);
+            button7.Location = new Point(813, 3);
+            button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
-            button7.Size = new Size(23, 23);
+            button7.Size = new Size(26, 31);
             button7.TabIndex = 7;
             button7.Text = "X";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(3, 6);
+            label4.Location = new Point(3, 8);
             label4.Name = "label4";
-            label4.Size = new Size(164, 15);
+            label4.Size = new Size(195, 17);
             label4.TabIndex = 1;
             label4.Text = "School Management System";
             // 
             // signform
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSeaGreen;
-            ClientSize = new Size(737, 468);
+            ClientSize = new Size(842, 624);
             Controls.Add(panel4);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "signform";
             Text = "signform";
             panel1.ResumeLayout(false);
@@ -246,19 +261,19 @@
 
         private Panel panel1;
         private Panel panel3;
-        private Button button1;
+        private Button signInBtn;
         private Label label7;
-        private TextBox textBox4;
-        private TextBox textBox1;
+        private TextBox password;
+        private TextBox userName;
         private Label label3;
         private Label label1;
         private Panel panel2;
         private Label label5;
         private PictureBox pictureBox2;
-        private LinkLabel linkLabel1;
-        private Button button2;
+        private Button RegBtn;
         private Panel panel4;
         private Label label4;
         private Button button7;
+        private CheckBox showPass;
     }
 }
