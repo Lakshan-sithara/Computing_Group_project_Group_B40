@@ -16,5 +16,25 @@ namespace Schoolmanagementsystem
         {
             InitializeComponent();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signInBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            password.PasswordChar = showPass.Checked ? '\0' : '*';
+        }
     }
 }
