@@ -34,8 +34,8 @@
             RegBtn = new Button();
             signInBtn = new Button();
             label7 = new Label();
-            password = new TextBox();
-            userName = new TextBox();
+            passwordBox = new TextBox();
+            userNameBox = new TextBox();
             label3 = new Label();
             label1 = new Label();
             panel2 = new Panel();
@@ -69,8 +69,8 @@
             panel3.Controls.Add(RegBtn);
             panel3.Controls.Add(signInBtn);
             panel3.Controls.Add(label7);
-            panel3.Controls.Add(password);
-            panel3.Controls.Add(userName);
+            panel3.Controls.Add(passwordBox);
+            panel3.Controls.Add(userNameBox);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label1);
             panel3.Location = new Point(379, 49);
@@ -128,21 +128,21 @@
             label7.Text = "Password";
             label7.Click += label7_Click;
             // 
-            // password
+            // passwordBox
             // 
-            password.Location = new Point(31, 192);
-            password.Margin = new Padding(3, 4, 3, 4);
-            password.Name = "password";
-            password.Size = new Size(251, 27);
-            password.TabIndex = 9;
+            passwordBox.Location = new Point(31, 192);
+            passwordBox.Margin = new Padding(3, 4, 3, 4);
+            passwordBox.Name = "passwordBox";
+            passwordBox.Size = new Size(251, 27);
+            passwordBox.TabIndex = 9;
             // 
-            // userName
+            // userNameBox
             // 
-            userName.Location = new Point(31, 112);
-            userName.Margin = new Padding(3, 4, 3, 4);
-            userName.Name = "userName";
-            userName.Size = new Size(251, 27);
-            userName.TabIndex = 6;
+            userNameBox.Location = new Point(31, 112);
+            userNameBox.Margin = new Padding(3, 4, 3, 4);
+            userNameBox.Name = "userNameBox";
+            userNameBox.Size = new Size(251, 27);
+            userNameBox.TabIndex = 6;
             // 
             // label3
             // 
@@ -263,8 +263,8 @@
         private Panel panel3;
         private Button signInBtn;
         private Label label7;
-        private TextBox password;
-        private TextBox userName;
+        private TextBox passwordBox;
+        private TextBox userNameBox;
         private Label label3;
         private Label label1;
         private Panel panel2;
