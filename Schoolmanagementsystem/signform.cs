@@ -30,7 +30,7 @@ namespace Schoolmanagementsystem
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            string mySqlConn = "server=127.0.0.1;user=root;database=school_managment_system;password=";
+            string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
 
             string username = userNameBox.Text.Trim();
@@ -45,7 +45,7 @@ namespace Schoolmanagementsystem
             try
             {
                 mySqlConnection.Open();
-                MySqlCommand mySqlCommand = new MySqlCommand("SELECT * FROM login WHERE username = @username AND password = @password", mySqlConnection);
+                MySqlCommand mySqlCommand = new MySqlCommand("SELECT * FROM admin WHERE username = @username AND password = @password", mySqlConnection);
                 mySqlCommand.Parameters.AddWithValue("@username", username);
                 mySqlCommand.Parameters.AddWithValue("@password", pass);
 
