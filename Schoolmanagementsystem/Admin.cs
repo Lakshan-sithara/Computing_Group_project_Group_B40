@@ -31,5 +31,40 @@ namespace Schoolmanagementsystem
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Addstudentdetails addstudent = new Addstudentdetails();
+            addstudent.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Addacademicdetails addacademic = new Addacademicdetails();
+            addacademic.Show();
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Addparentdetails addparent = new Addparentdetails();
+            addparent.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Addnonacademicdetails addnonacademic = new Addnonacademicdetails();
+            addnonacademic.Show();
+            this.Hide();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            AddYearschedule addyear = new AddYearschedule();
+            addyear.Show();
+            this.Hide();
+        }
     }
 }
