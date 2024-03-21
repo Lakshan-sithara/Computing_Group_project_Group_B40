@@ -69,8 +69,8 @@ namespace Schoolmanagementsystem
             if (panel3.Width >= 711)
             {
                 timer1.Stop();
-                signform signIn = new signform();
-                signIn.Show();
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
                 this.Hide();
             }
 

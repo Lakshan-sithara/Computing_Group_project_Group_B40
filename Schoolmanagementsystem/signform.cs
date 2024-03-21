@@ -54,8 +54,8 @@ namespace Schoolmanagementsystem
                 if (reader.Read())
                 {
                     MessageBox.Show("Login Successful");
-                    Dashboard form2 = new Dashboard();
-                    form2.Show();
+                    Admin admin = new Admin();
+                    admin.Show();
                     this.Hide();
                 }
                 else
