@@ -12,6 +12,7 @@ namespace Schoolmanagementsystem
 {
     public partial class Addstudentdetails : Form
     {
+        
         Image i;
         Bitmap b;
         public Addstudentdetails()
@@ -114,6 +115,48 @@ namespace Schoolmanagementsystem
                 b = (Bitmap)i;
                 pictureBox1.Image = b;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Addstudentdetails addstudentdetails = new Addstudentdetails();
+            addstudentdetails.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Addacademicdetails addacademicdetails = new Addacademicdetails();
+            addacademicdetails.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Addnonacademicdetails addnonacademicdetails = new Addnonacademicdetails();
+            addnonacademicdetails.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Addparentdetails addparentdetails = new Addparentdetails();
+            addparentdetails.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
         }
     }
 }
