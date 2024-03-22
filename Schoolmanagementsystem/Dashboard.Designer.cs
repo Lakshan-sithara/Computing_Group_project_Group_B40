@@ -35,7 +35,6 @@
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
             panel2 = new Panel();
             label4 = new Label();
             pictureBox1 = new PictureBox();
@@ -65,7 +64,6 @@
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(-1, -3);
             panel1.Margin = new Padding(3, 4, 3, 4);
@@ -99,8 +97,9 @@
             button5.Name = "button5";
             button5.Size = new Size(215, 52);
             button5.TabIndex = 5;
-            button5.Text = "Parennt";
+            button5.Text = "Parent";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -115,6 +114,7 @@
             button4.TabIndex = 4;
             button4.Text = "Non-Academic Staff";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -144,20 +144,7 @@
             button2.TabIndex = 2;
             button2.Text = "Student";
             button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(20, 35, 138);
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 57);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(215, 52);
-            button1.TabIndex = 1;
-            button1.Text = "Dashboard";
-            button1.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // panel2
             // 
@@ -327,7 +314,6 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
-        private Button button1;
         private Button AdminBtn;
         private Button button5;
         private Button button4;
