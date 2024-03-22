@@ -44,6 +44,8 @@
             label3 = new Label();
             pictureBox2 = new PictureBox();
             panel4 = new Panel();
+            label9 = new Label();
+            mobileTB = new TextBox();
             label6 = new Label();
             NAID = new TextBox();
             ADdateTB = new TextBox();
@@ -58,8 +60,7 @@
             label5 = new Label();
             label2 = new Label();
             label1 = new Label();
-            mobileTB = new TextBox();
-            label9 = new Label();
+            button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -266,8 +267,25 @@
             panel4.Location = new Point(394, 72);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(434, 536);
+            panel4.Size = new Size(434, 332);
             panel4.TabIndex = 8;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(18, 269);
+            label9.Name = "label9";
+            label9.Size = new Size(80, 20);
+            label9.TabIndex = 24;
+            label9.Text = "Mobile No";
+            // 
+            // mobileTB
+            // 
+            mobileTB.Location = new Point(159, 266);
+            mobileTB.Margin = new Padding(3, 4, 3, 4);
+            mobileTB.Name = "mobileTB";
+            mobileTB.Size = new Size(257, 27);
+            mobileTB.TabIndex = 23;
             // 
             // label6
             // 
@@ -393,22 +411,16 @@
             label1.TabIndex = 0;
             label1.Text = "Name";
             // 
-            // mobileTB
+            // button8
             // 
-            mobileTB.Location = new Point(159, 266);
-            mobileTB.Margin = new Padding(3, 4, 3, 4);
-            mobileTB.Name = "mobileTB";
-            mobileTB.Size = new Size(257, 27);
-            mobileTB.TabIndex = 23;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(18, 269);
-            label9.Name = "label9";
-            label9.Size = new Size(80, 20);
-            label9.TabIndex = 24;
-            label9.Text = "Mobile No";
+            button8.BackColor = Color.FromArgb(0, 192, 0);
+            button8.Location = new Point(667, 541);
+            button8.Name = "button8";
+            button8.Size = new Size(143, 38);
+            button8.TabIndex = 25;
+            button8.Text = "Create Time Table";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click_1;
             // 
             // Non_academic_profile
             // 
@@ -416,6 +428,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(14, 145, 240);
             ClientSize = new Size(842, 624);
+            Controls.Add(button8);
             Controls.Add(panel4);
             Controls.Add(pictureBox2);
             Controls.Add(panel3);
@@ -469,5 +482,6 @@
         private TextBox NAID;
         private TextBox mobileTB;
         private Label label9;
+        private Button button8;
     }
 }

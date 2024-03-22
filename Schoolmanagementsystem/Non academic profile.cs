@@ -48,7 +48,7 @@ namespace Schoolmanagementsystem
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
             mySqlConnection.Open();
-            if(NAID.Text != "")
+            if (NAID.Text != "")
             {
                 MySqlCommand command = new MySqlCommand("SELECT Name,NIC,DOB,Religion,Admission_date,Mobile_no,Address FROM non-academic_staff WHERE NAID = @non_academic_staff_id", mySqlConnection);
                 command.Parameters.AddWithValue("@non_academic_staff_id", NAID.Text);
@@ -62,7 +62,7 @@ namespace Schoolmanagementsystem
                     AddressTB.Text = reader.GetString("Address");
                     ADdateTB.Text = reader.GetString("Admission_date");
                     mobileTB.Text = reader.GetString("Mobile_no");
-                    
+
                 }
             }
             else
@@ -70,6 +70,39 @@ namespace Schoolmanagementsystem
                 MessageBox.Show("Please enter the NAID");
             }
             mySqlConnection.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            timetable tt = new timetable();
+            tt.Show();
+            this.Hide();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            Addstudenttimetable addstudenttimetable = new Addstudenttimetable();
+            addstudenttimetable.Show();
+            this.Hide();
         }
     }
 }
