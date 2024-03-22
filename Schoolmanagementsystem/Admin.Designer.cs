@@ -100,7 +100,7 @@
             button6.BackgroundImageLayout = ImageLayout.None;
             button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 594);
+            button6.Location = new Point(0, 653);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(215, 52);
@@ -213,6 +213,7 @@
             button11.TabIndex = 7;
             button11.Text = "X";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // label3
             // 
