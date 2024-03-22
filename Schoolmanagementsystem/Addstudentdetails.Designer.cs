@@ -120,6 +120,7 @@
             button8.TabIndex = 13;
             button8.Text = "X";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // label2
             // 
