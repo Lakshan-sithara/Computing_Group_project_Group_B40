@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,9 @@ namespace Schoolmanagementsystem
 
         private void button7_Click(object sender, EventArgs e)
         {
+            Student_result sr = new Student_result();
+            sr.Show();
+            this.Hide();
 
         }
 
@@ -134,10 +138,58 @@ namespace Schoolmanagementsystem
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
+            MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
+            mySqlConnection.Open();
+            if (SnameTB.Text != "")
+            {
+                MySqlCommand command = new MySqlCommand("SELECT Name,Grade,Class,DOB,gender,Religion,Admission_date,Address FROM student WHERE SID = @student_id", mySqlConnection);
+                command.Parameters.AddWithValue("@student_id", SnameTB.Text);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    SnameTB.Text = reader.GetString("Name");
+                    gradeTB.Text = reader.GetString("Grade");
+                    classTB.Text = reader.GetString("Class");
+                    DOBTB.Text = reader.GetString("DOB");
+                    genderTB.Text = reader.GetString("gender");
+                    religionTB.Text = reader.GetString("Religion");
+                    admissonTB.Text = reader.GetString("Admission_date");
+                    addressTB.Text = reader.GetString("Address");
+
+                }
+                mySqlConnection.Close();
+            }
         }
 
         private void Student_profile_Load(object sender, EventArgs e)
         {
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            timetable tt = new timetable();
+            tt.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }
