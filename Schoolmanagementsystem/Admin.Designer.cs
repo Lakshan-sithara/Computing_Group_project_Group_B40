@@ -35,7 +35,6 @@
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
             panel3 = new Panel();
@@ -57,7 +56,6 @@
             pictureBox4 = new PictureBox();
             label5 = new Label();
             button10 = new Button();
-            button12 = new Button();
             button13 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -98,17 +96,18 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(20, 35, 138);
+            button6.BackColor = Color.FromArgb(192, 0, 0);
             button6.BackgroundImageLayout = ImageLayout.None;
             button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 331);
+            button6.Location = new Point(0, 653);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(215, 52);
             button6.TabIndex = 6;
-            button6.Text = "Admin";
+            button6.Text = "Log Out";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -116,7 +115,7 @@
             button5.BackgroundImageLayout = ImageLayout.None;
             button5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 276);
+            button5.Location = new Point(0, 261);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(215, 52);
@@ -130,7 +129,7 @@
             button4.BackgroundImageLayout = ImageLayout.None;
             button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 221);
+            button4.Location = new Point(0, 201);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(215, 52);
@@ -144,7 +143,7 @@
             button3.BackgroundImageLayout = ImageLayout.None;
             button3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 167);
+            button3.Location = new Point(0, 141);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(215, 52);
@@ -158,27 +157,14 @@
             button2.BackgroundImageLayout = ImageLayout.None;
             button2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 112);
+            button2.Location = new Point(3, 81);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(215, 52);
             button2.TabIndex = 2;
             button2.Text = "Student";
             button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(20, 35, 138);
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 57);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(215, 52);
-            button1.TabIndex = 1;
-            button1.Text = "Dashboard";
-            button1.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // panel2
             // 
@@ -199,7 +185,6 @@
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
@@ -228,6 +213,7 @@
             button11.TabIndex = 7;
             button11.Text = "X";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // label3
             // 
@@ -428,24 +414,11 @@
             button10.UseVisualStyleBackColor = false;
             button10.Click += button10_Click;
             // 
-            // button12
-            // 
-            button12.BackColor = Color.Cyan;
-            button12.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button12.Location = new Point(443, 635);
-            button12.Margin = new Padding(3, 4, 3, 4);
-            button12.Name = "button12";
-            button12.Size = new Size(176, 35);
-            button12.TabIndex = 10;
-            button12.Text = "Add Student Timetable";
-            button12.UseVisualStyleBackColor = false;
-            button12.Click += button12_Click;
-            // 
             // button13
             // 
             button13.BackColor = Color.Cyan;
             button13.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button13.Location = new Point(443, 684);
+            button13.Location = new Point(592, 653);
             button13.Margin = new Padding(3, 4, 3, 4);
             button13.Name = "button13";
             button13.Size = new Size(176, 32);
@@ -461,7 +434,6 @@
             BackColor = Color.FromArgb(14, 145, 240);
             ClientSize = new Size(842, 743);
             Controls.Add(button13);
-            Controls.Add(button12);
             Controls.Add(panel5);
             Controls.Add(panel6);
             Controls.Add(panel7);
@@ -502,7 +474,6 @@
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button button1;
         private Panel panel2;
         private Panel panel1;
         private Panel panel3;
@@ -524,7 +495,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private Button button11;
-        private Button button12;
         private Button button13;
     }
 }

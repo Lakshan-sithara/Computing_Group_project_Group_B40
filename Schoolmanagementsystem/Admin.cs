@@ -66,5 +66,27 @@ namespace Schoolmanagementsystem
             addyear.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
