@@ -211,6 +211,7 @@
             panel4.Controls.Add(label6);
             panel4.Controls.Add(ADDTP);
             panel4.Controls.Add(radioButton2);
+            panel4.Controls.Add(label9);
             panel4.Controls.Add(radioButton1);
             panel4.Controls.Add(DOBDTB);
             panel4.Controls.Add(MobileTB);
@@ -218,7 +219,6 @@
             panel4.Controls.Add(ReTB);
             panel4.Controls.Add(NICTB);
             panel4.Controls.Add(label10);
-            panel4.Controls.Add(label9);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label5);
@@ -267,7 +267,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(199, 120);
+            radioButton2.Location = new Point(199, 154);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(76, 24);
             radioButton2.TabIndex = 28;
@@ -279,7 +279,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(130, 120);
+            radioButton1.Location = new Point(130, 154);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(63, 24);
             radioButton1.TabIndex = 27;
@@ -290,7 +290,7 @@
             // 
             // DOBDTB
             // 
-            DOBDTB.Location = new Point(130, 83);
+            DOBDTB.Location = new Point(130, 117);
             DOBDTB.Name = "DOBDTB";
             DOBDTB.Size = new Size(246, 27);
             DOBDTB.TabIndex = 26;
@@ -305,7 +305,7 @@
             // 
             // AIDTB
             // 
-            AIDTB.Location = new Point(130, 185);
+            AIDTB.Location = new Point(130, 13);
             AIDTB.Margin = new Padding(3, 4, 3, 4);
             AIDTB.Name = "AIDTB";
             AIDTB.Size = new Size(246, 27);
@@ -314,7 +314,7 @@
             // 
             // ReTB
             // 
-            ReTB.Location = new Point(130, 151);
+            ReTB.Location = new Point(130, 185);
             ReTB.Margin = new Padding(3, 4, 3, 4);
             ReTB.Name = "ReTB";
             ReTB.Size = new Size(246, 27);
@@ -323,7 +323,7 @@
             // 
             // NICTB
             // 
-            NICTB.Location = new Point(130, 49);
+            NICTB.Location = new Point(130, 83);
             NICTB.Margin = new Padding(3, 4, 3, 4);
             NICTB.Name = "NICTB";
             NICTB.Size = new Size(246, 27);
@@ -342,7 +342,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(17, 195);
+            label9.Location = new Point(19, 20);
             label9.Name = "label9";
             label9.Size = new Size(59, 20);
             label9.TabIndex = 18;
@@ -352,7 +352,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(17, 159);
+            label8.Location = new Point(17, 193);
             label8.Name = "label8";
             label8.Size = new Size(64, 20);
             label8.TabIndex = 17;
@@ -361,7 +361,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(17, 127);
+            label7.Location = new Point(17, 161);
             label7.Name = "label7";
             label7.Size = new Size(57, 20);
             label7.TabIndex = 16;
@@ -371,7 +371,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(17, 92);
+            label5.Location = new Point(17, 126);
             label5.Name = "label5";
             label5.Size = new Size(96, 20);
             label5.TabIndex = 15;
@@ -381,7 +381,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(17, 57);
+            label2.Location = new Point(17, 91);
             label2.Name = "label2";
             label2.Size = new Size(82, 20);
             label2.TabIndex = 14;
@@ -389,16 +389,17 @@
             // 
             // nameTB
             // 
-            nameTB.Location = new Point(130, 16);
+            nameTB.Location = new Point(130, 48);
             nameTB.Margin = new Padding(3, 4, 3, 4);
             nameTB.Name = "nameTB";
             nameTB.Size = new Size(246, 27);
             nameTB.TabIndex = 13;
+            nameTB.TextChanged += nameTB_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(17, 24);
+            label1.Location = new Point(17, 48);
             label1.Name = "label1";
             label1.Size = new Size(49, 20);
             label1.TabIndex = 1;

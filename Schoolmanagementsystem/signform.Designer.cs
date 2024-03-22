@@ -31,7 +31,6 @@
             panel1 = new Panel();
             panel3 = new Panel();
             showPass = new CheckBox();
-            RegBtn = new Button();
             signInBtn = new Button();
             label7 = new Label();
             passwordBox = new TextBox();
@@ -66,7 +65,6 @@
             // 
             panel3.BackColor = Color.PowderBlue;
             panel3.Controls.Add(showPass);
-            panel3.Controls.Add(RegBtn);
             panel3.Controls.Add(signInBtn);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(passwordBox);
@@ -89,19 +87,6 @@
             showPass.Text = "Show Password";
             showPass.UseVisualStyleBackColor = true;
             showPass.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // RegBtn
-            // 
-            RegBtn.BackColor = Color.MidnightBlue;
-            RegBtn.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            RegBtn.ForeColor = Color.White;
-            RegBtn.Location = new Point(80, 349);
-            RegBtn.Margin = new Padding(3, 4, 3, 4);
-            RegBtn.Name = "RegBtn";
-            RegBtn.Size = new Size(154, 43);
-            RegBtn.TabIndex = 13;
-            RegBtn.Text = "REGISTER";
-            RegBtn.UseVisualStyleBackColor = false;
             // 
             // signInBtn
             // 
@@ -143,6 +128,7 @@
             userNameBox.Name = "userNameBox";
             userNameBox.Size = new Size(251, 27);
             userNameBox.TabIndex = 6;
+            userNameBox.TextChanged += userNameBox_TextChanged;
             // 
             // label3
             // 
@@ -270,7 +256,6 @@
         private Panel panel2;
         private Label label5;
         private PictureBox pictureBox2;
-        private Button RegBtn;
         private Panel panel4;
         private Label label4;
         private Button button7;
