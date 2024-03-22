@@ -174,7 +174,7 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO student (Name, Admission_number, DOB, Religion, Address, Father_name, Mother_name, gender,Grade,Class,Addmission_datw) " +
+                string insertQuery = "INSERT INTO student (Name, Admission_number, DOB, Religion, Address, Father_name, Mother_name, gender,Grade,Class,Addmission_date) " +
                                      "VALUES ('" + nameTB.Text + "', '" + AdmiNuTB.Text + "', '" + DOBDTP.Value.ToString("yyyy-MM-dd") + "', '" + religionTB.Text + "', " +
                                      "'" + addressTB.Text + "', '" + fatherTB.Text + "', '" + motherTB.Text + "', '" + Gender + "','" + grade + "','" + Class + ",'"+addmission_date_DTP.Value.ToString("yyyy-MM-dd")+"')";
                 MySqlCommand command = new MySqlCommand(insertQuery, conn);
