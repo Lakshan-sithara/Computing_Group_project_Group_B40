@@ -29,7 +29,7 @@ namespace Schoolmanagementsystem
             using (MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
             {
                 mySqlConnection.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM student", mySqlConnection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM student WHERE SID='"+SIDTB+"'", mySqlConnection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 

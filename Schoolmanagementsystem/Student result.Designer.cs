@@ -41,6 +41,8 @@
             label3 = new Label();
             examResultDGV = new DataGridView();
             button8 = new Button();
+            SIDTB = new TextBox();
+            label5 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -192,7 +194,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(259, 112);
+            button8.Location = new Point(666, 113);
             button8.Name = "button8";
             button8.Size = new Size(132, 29);
             button8.TabIndex = 5;
@@ -200,12 +202,30 @@
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
+            // SIDTB
+            // 
+            SIDTB.Location = new Point(454, 118);
+            SIDTB.Name = "SIDTB";
+            SIDTB.Size = new Size(125, 27);
+            SIDTB.TabIndex = 6;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(259, 118);
+            label5.Name = "label5";
+            label5.Size = new Size(189, 20);
+            label5.TabIndex = 7;
+            label5.Text = "Enter Your Student Number";
+            // 
             // Student_result
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(14, 145, 240);
+            BackColor = Color.FromArgb(205, 243, 245);
             ClientSize = new Size(842, 624);
+            Controls.Add(label5);
+            Controls.Add(SIDTB);
             Controls.Add(button8);
             Controls.Add(examResultDGV);
             Controls.Add(panel3);
@@ -222,6 +242,7 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)examResultDGV).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -239,5 +260,7 @@
         private Button button7;
         private DataGridView examResultDGV;
         private Button button8;
+        private TextBox SIDTB;
+        private Label label5;
     }
 }
