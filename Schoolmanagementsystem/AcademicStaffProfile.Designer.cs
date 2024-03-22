@@ -30,10 +30,6 @@
         {
             panel1 = new Panel();
             button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
             label4 = new Label();
@@ -42,22 +38,26 @@
             button9 = new Button();
             label3 = new Label();
             pictureBox2 = new PictureBox();
-            button7 = new Button();
             button8 = new Button();
             panel4 = new Panel();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            AddressTB = new TextBox();
+            label11 = new Label();
+            label6 = new Label();
+            ADDTP = new DateTimePicker();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            DOBDTB = new DateTimePicker();
+            MobileTB = new TextBox();
+            AIDTB = new TextBox();
+            ReTB = new TextBox();
+            NICTB = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label5 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            nameTB = new TextBox();
             label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -71,10 +71,6 @@
             // 
             panel1.BackColor = Color.FromArgb(25, 35, 138);
             panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
@@ -86,78 +82,18 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(20, 35, 138);
+            button6.BackColor = Color.FromArgb(192, 0, 0);
             button6.BackgroundImageLayout = ImageLayout.None;
             button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 331);
+            button6.Location = new Point(0, 543);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(215, 52);
             button6.TabIndex = 6;
-            button6.Text = "Admin";
+            button6.Text = "LogOut";
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(20, 35, 138);
-            button5.BackgroundImageLayout = ImageLayout.None;
-            button5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 276);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(215, 52);
-            button5.TabIndex = 5;
-            button5.Text = "Parennt";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(20, 35, 138);
-            button4.BackgroundImageLayout = ImageLayout.None;
-            button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 221);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(215, 52);
-            button4.TabIndex = 4;
-            button4.Text = "Non-Academic Staff";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(20, 35, 138);
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 167);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(215, 52);
-            button3.TabIndex = 3;
-            button3.Text = "Academic Staff";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(20, 35, 138);
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 112);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(215, 52);
-            button2.TabIndex = 2;
-            button2.Text = "Student";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -165,12 +101,12 @@
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 57);
+            button1.Location = new Point(0, 67);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(215, 52);
             button1.TabIndex = 1;
-            button1.Text = "Dashboard";
+            button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -253,48 +189,41 @@
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
             // 
-            // button7
-            // 
-            button7.BackColor = Color.MidnightBlue;
-            button7.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(232, 297);
-            button7.Margin = new Padding(3, 4, 3, 4);
-            button7.Name = "button7";
-            button7.Size = new Size(171, 43);
-            button7.TabIndex = 12;
-            button7.Text = "Year Schedule ";
-            button7.UseVisualStyleBackColor = false;
-            // 
             // button8
             // 
             button8.BackColor = Color.MidnightBlue;
             button8.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
-            button8.Location = new Point(232, 364);
+            button8.Location = new Point(232, 292);
             button8.Margin = new Padding(3, 4, 3, 4);
             button8.Name = "button8";
             button8.Size = new Size(171, 43);
             button8.TabIndex = 13;
             button8.Text = "Add Student's Marks";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(205, 243, 245);
-            panel4.Controls.Add(textBox7);
-            panel4.Controls.Add(textBox6);
-            panel4.Controls.Add(textBox5);
-            panel4.Controls.Add(textBox4);
-            panel4.Controls.Add(textBox3);
-            panel4.Controls.Add(textBox2);
+            panel4.Controls.Add(AddressTB);
+            panel4.Controls.Add(label11);
+            panel4.Controls.Add(label6);
+            panel4.Controls.Add(ADDTP);
+            panel4.Controls.Add(radioButton2);
+            panel4.Controls.Add(radioButton1);
+            panel4.Controls.Add(DOBDTB);
+            panel4.Controls.Add(MobileTB);
+            panel4.Controls.Add(AIDTB);
+            panel4.Controls.Add(ReTB);
+            panel4.Controls.Add(NICTB);
             panel4.Controls.Add(label10);
             panel4.Controls.Add(label9);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label2);
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(nameTB);
             panel4.Controls.Add(label1);
             panel4.Location = new Point(424, 88);
             panel4.Margin = new Padding(3, 4, 3, 4);
@@ -302,56 +231,103 @@
             panel4.Size = new Size(391, 507);
             panel4.TabIndex = 14;
             // 
-            // textBox7
+            // AddressTB
             // 
-            textBox7.Location = new Point(130, 220);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(246, 27);
-            textBox7.TabIndex = 25;
+            AddressTB.Location = new Point(130, 310);
+            AddressTB.Margin = new Padding(3, 4, 3, 4);
+            AddressTB.Name = "AddressTB";
+            AddressTB.Size = new Size(246, 27);
+            AddressTB.TabIndex = 34;
             // 
-            // textBox6
+            // label11
             // 
-            textBox6.Location = new Point(130, 185);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(246, 27);
-            textBox6.TabIndex = 24;
-            textBox6.TextChanged += textBox6_TextChanged;
+            label11.AutoSize = true;
+            label11.Location = new Point(19, 310);
+            label11.Name = "label11";
+            label11.Size = new Size(62, 20);
+            label11.TabIndex = 33;
+            label11.Text = "Address";
             // 
-            // textBox5
+            // label6
             // 
-            textBox5.Location = new Point(130, 151);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(246, 27);
-            textBox5.TabIndex = 23;
-            textBox5.TextChanged += textBox5_TextChanged;
+            label6.AutoSize = true;
+            label6.Location = new Point(19, 268);
+            label6.Name = "label6";
+            label6.Size = new Size(80, 20);
+            label6.TabIndex = 32;
+            label6.Text = "Mobile No";
             // 
-            // textBox4
+            // ADDTP
             // 
-            textBox4.Location = new Point(130, 116);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(246, 27);
-            textBox4.TabIndex = 22;
-            textBox4.TextChanged += textBox4_TextChanged;
+            ADDTP.Location = new Point(130, 222);
+            ADDTP.Name = "ADDTP";
+            ADDTP.Size = new Size(246, 27);
+            ADDTP.TabIndex = 31;
             // 
-            // textBox3
+            // radioButton2
             // 
-            textBox3.Location = new Point(130, 83);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(246, 27);
-            textBox3.TabIndex = 21;
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(199, 120);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(76, 24);
+            radioButton2.TabIndex = 28;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "female";
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
-            // textBox2
+            // radioButton1
             // 
-            textBox2.Location = new Point(130, 49);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(246, 27);
-            textBox2.TabIndex = 20;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(130, 120);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(63, 24);
+            radioButton1.TabIndex = 27;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "male";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // DOBDTB
+            // 
+            DOBDTB.Location = new Point(130, 83);
+            DOBDTB.Name = "DOBDTB";
+            DOBDTB.Size = new Size(246, 27);
+            DOBDTB.TabIndex = 26;
+            // 
+            // MobileTB
+            // 
+            MobileTB.Location = new Point(130, 265);
+            MobileTB.Margin = new Padding(3, 4, 3, 4);
+            MobileTB.Name = "MobileTB";
+            MobileTB.Size = new Size(246, 27);
+            MobileTB.TabIndex = 25;
+            // 
+            // AIDTB
+            // 
+            AIDTB.Location = new Point(130, 185);
+            AIDTB.Margin = new Padding(3, 4, 3, 4);
+            AIDTB.Name = "AIDTB";
+            AIDTB.Size = new Size(246, 27);
+            AIDTB.TabIndex = 24;
+            AIDTB.TextChanged += textBox6_TextChanged;
+            // 
+            // ReTB
+            // 
+            ReTB.Location = new Point(130, 151);
+            ReTB.Margin = new Padding(3, 4, 3, 4);
+            ReTB.Name = "ReTB";
+            ReTB.Size = new Size(246, 27);
+            ReTB.TabIndex = 23;
+            ReTB.TextChanged += textBox5_TextChanged;
+            // 
+            // NICTB
+            // 
+            NICTB.Location = new Point(130, 49);
+            NICTB.Margin = new Padding(3, 4, 3, 4);
+            NICTB.Name = "NICTB";
+            NICTB.Size = new Size(246, 27);
+            NICTB.TabIndex = 20;
             // 
             // label10
             // 
@@ -411,13 +387,13 @@
             label2.TabIndex = 14;
             label2.Text = "ID Number";
             // 
-            // textBox1
+            // nameTB
             // 
-            textBox1.Location = new Point(130, 16);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(246, 27);
-            textBox1.TabIndex = 13;
+            nameTB.Location = new Point(130, 16);
+            nameTB.Margin = new Padding(3, 4, 3, 4);
+            nameTB.Name = "nameTB";
+            nameTB.Size = new Size(246, 27);
+            nameTB.TabIndex = 13;
             // 
             // label1
             // 
@@ -436,7 +412,6 @@
             ClientSize = new Size(842, 624);
             Controls.Add(panel4);
             Controls.Add(button8);
-            Controls.Add(button7);
             Controls.Add(pictureBox2);
             Controls.Add(panel3);
             Controls.Add(panel1);
@@ -460,10 +435,6 @@
 
         private Panel panel1;
         private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
         private Button button1;
         private Panel panel2;
         private Label label4;
@@ -471,7 +442,6 @@
         private Panel panel3;
         private Label label3;
         private PictureBox pictureBox2;
-        private Button button7;
         private Button button8;
         private Panel panel4;
         private Label label1;
@@ -479,15 +449,20 @@
         private Label label7;
         private Label label5;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox nameTB;
         private Label label9;
         private Label label10;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox7;
-        private TextBox textBox6;
+        private TextBox ReTB;
+        private TextBox NICTB;
+        private TextBox MobileTB;
+        private TextBox AIDTB;
         private Button button9;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private DateTimePicker DOBDTB;
+        private Label label6;
+        private DateTimePicker ADDTP;
+        private TextBox AddressTB;
+        private Label label11;
     }
 }
