@@ -29,15 +29,15 @@ namespace Schoolmanagementsystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            signform_new signform = new signform();
-            signform.Show();
+            Registerform registerForm = new Registerform();
+            registerForm.Show();
             this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            signform_new adminSign = new signform();
-            adminSign.Show();
+            Registerform registerForm = new Registerform();
+            registerForm.Show();
             this.Hide();
         }
 
@@ -65,8 +65,8 @@ namespace Schoolmanagementsystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            signform_new signform = new signform();
-            signform.Show();
+            Registerform registerForm = new Registerform();
+            registerForm.Show();
             this.Hide();
         }
 

@@ -15,7 +15,7 @@ namespace Schoolmanagementsystem
     {
         public signform_new()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -33,10 +33,10 @@ namespace Schoolmanagementsystem
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
 
-            string username = userNameBox.Text.Trim();
-            string pass = passwordBox.Text.Trim();
+            //string username = userNameBox.Text.Trim();
+            ///string pass = passwordBox.Text.Trim();
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(pass))
+            //if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(pass))
             {
                 MessageBox.Show("Please fill all the fields");
                 return;
@@ -48,8 +48,8 @@ namespace Schoolmanagementsystem
 
                 // Check login for admin
                 MySqlCommand adminCommand = new MySqlCommand("SELECT * FROM admin WHERE username = @username AND password = @password", mySqlConnection);
-                adminCommand.Parameters.AddWithValue("@username", username);
-                adminCommand.Parameters.AddWithValue("@password", pass);
+                //adminCommand.Parameters.AddWithValue("@username", username);
+                //adminCommand.Parameters.AddWithValue("@password", pass);
                 MySqlDataReader adminReader = adminCommand.ExecuteReader();
 
                 if (adminReader.Read())
@@ -66,8 +66,8 @@ namespace Schoolmanagementsystem
 
                 // Check login for academic
                 MySqlCommand academicCommand = new MySqlCommand("SELECT * FROM academic WHERE Username = @username AND Password = @password", mySqlConnection);
-                academicCommand.Parameters.AddWithValue("@username", username);
-                academicCommand.Parameters.AddWithValue("@password", pass);
+                //academicCommand.Parameters.AddWithValue("@username", username);
+                //academicCommand.Parameters.AddWithValue("@password", pass);
                 MySqlDataReader academicReader = academicCommand.ExecuteReader();
 
                 if (academicReader.Read())
@@ -84,8 +84,8 @@ namespace Schoolmanagementsystem
 
                 // Check login for non-academic (if applicable)
                 MySqlCommand nonAcademicCommand = new MySqlCommand("SELECT * FROM non-academic_staff WHERE Username = @username AND Password = @password", mySqlConnection);
-                nonAcademicCommand.Parameters.AddWithValue("@username", username);
-                nonAcademicCommand.Parameters.AddWithValue("@password", pass);
+                //nonAcademicCommand.Parameters.AddWithValue("@username", username);
+                //nonAcademicCommand.Parameters.AddWithValue("@password", pass);
                 MySqlDataReader nonAcademicReader = nonAcademicCommand.ExecuteReader();
                 // Check login for parent (if applicable)
                 if (nonAcademicReader.Read())
@@ -99,7 +99,7 @@ namespace Schoolmanagementsystem
                 }
                 nonAcademicReader.Close();
 
-                
+
 
 
                 // If none of the above matches, show invalid login message
@@ -119,7 +119,7 @@ namespace Schoolmanagementsystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            passwordBox.PasswordChar = showPass.Checked ? '\0' : '*';
+            //passwordBox.PasswordChar = showPass.Checked ? '\0' : '*';
         }
 
         private void userNameBox_TextChanged(object sender, EventArgs e)

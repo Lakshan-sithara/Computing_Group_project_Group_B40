@@ -77,7 +77,7 @@
             AdminBtn.BackgroundImageLayout = ImageLayout.None;
             AdminBtn.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             AdminBtn.ForeColor = Color.White;
-            AdminBtn.Location = new Point(0, 270);
+            AdminBtn.Location = new Point(0, 329);
             AdminBtn.Margin = new Padding(3, 4, 3, 4);
             AdminBtn.Name = "AdminBtn";
             AdminBtn.Size = new Size(215, 52);
@@ -107,7 +107,7 @@
             button4.BackgroundImageLayout = ImageLayout.None;
             button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 322);
+            button4.Location = new Point(1, 272);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(215, 52);

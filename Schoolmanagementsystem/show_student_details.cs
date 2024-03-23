@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Schoolmanagementsystem
 {
-    public partial class timetable : Form
+    public partial class show_student_details : Form
     {
-        string Grade;
         string Class;
-        public timetable()
+        string Grade;
+        public show_student_details()
         {
             InitializeComponent();
         }
@@ -65,22 +65,46 @@ namespace Schoolmanagementsystem
             Class = "D";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
             try
             {
                 mySqlConnection.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM time_table WHERE Grade = '" + Grade + "' AND Class = '" + Class + "'", mySqlConnection);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables;
+                string Query = "SELECT * FROM student WHERE Grade = @Grade AND Class = @Class";
+                MySqlCommand command = new MySqlCommand(Query, mySqlConnection);
+                command.Parameters.AddWithValue("@Grade", Grade);
+                command.Parameters.AddWithValue("@Class", Class);
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Student details added successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Student details not added");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                mySqlConnection.Close();
+            }
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM student", mySqlConnection);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            classDGV.DataSource = ds;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+            this.Hide();
         }
     }
 }

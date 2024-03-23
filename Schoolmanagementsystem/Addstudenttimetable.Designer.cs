@@ -31,60 +31,38 @@
             label14 = new Label();
             pictureBox1 = new PictureBox();
             button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
             panel3 = new Panel();
             button8 = new Button();
             label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            ttDTP = new DateTimePicker();
+            su1TB = new TextBox();
             label1 = new Label();
             label5 = new Label();
             label6 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
-            dateTimePicker4 = new DateTimePicker();
             label7 = new Label();
             label8 = new Label();
-            checkBox10 = new CheckBox();
-            checkBox9 = new CheckBox();
-            checkBox8 = new CheckBox();
-            checkBox7 = new CheckBox();
-            checkBox6 = new CheckBox();
-            checkBox5 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
-            dateTimePicker5 = new DateTimePicker();
-            dateTimePicker6 = new DateTimePicker();
-            dateTimePicker7 = new DateTimePicker();
-            dateTimePicker8 = new DateTimePicker();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
             button7 = new Button();
+            day1 = new ComboBox();
+            groupBox2 = new GroupBox();
+            radioButton3 = new RadioButton();
+            radioButton7 = new RadioButton();
+            radioButton4 = new RadioButton();
+            radioButton6 = new RadioButton();
+            radioButton5 = new RadioButton();
+            groupBox3 = new GroupBox();
+            radioButton11 = new RadioButton();
+            radioButton10 = new RadioButton();
+            radioButton9 = new RadioButton();
+            radioButton8 = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // label14
@@ -111,73 +89,18 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(20, 35, 138);
+            button6.BackColor = Color.FromArgb(192, 0, 0);
             button6.BackgroundImageLayout = ImageLayout.None;
             button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 331);
+            button6.Location = new Point(0, 594);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(215, 52);
             button6.TabIndex = 6;
-            button6.Text = "Admin";
+            button6.Text = "LogOut";
             button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(20, 35, 138);
-            button5.BackgroundImageLayout = ImageLayout.None;
-            button5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 276);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(215, 52);
-            button5.TabIndex = 5;
-            button5.Text = "Parennt";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(20, 35, 138);
-            button4.BackgroundImageLayout = ImageLayout.None;
-            button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 221);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(215, 52);
-            button4.TabIndex = 4;
-            button4.Text = "Non-Academic Staff";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(20, 35, 138);
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 167);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(215, 52);
-            button3.TabIndex = 3;
-            button3.Text = "Academic Staff";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(20, 35, 138);
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 112);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(215, 52);
-            button2.TabIndex = 2;
-            button2.Text = "Student";
-            button2.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button1
             // 
@@ -185,13 +108,14 @@
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 57);
+            button1.Location = new Point(1, 78);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(215, 52);
             button1.TabIndex = 1;
-            button1.Text = "Dashboard";
+            button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -208,10 +132,6 @@
             // 
             panel1.BackColor = Color.FromArgb(25, 35, 138);
             panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
@@ -254,45 +174,38 @@
             label4.TabIndex = 11;
             label4.Text = "Add Student's timetable";
             // 
-            // dateTimePicker1
+            // ttDTP
             // 
-            dateTimePicker1.Location = new Point(230, 245);
-            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(228, 27);
-            dateTimePicker1.TabIndex = 16;
+            ttDTP.Format = DateTimePickerFormat.Time;
+            ttDTP.Location = new Point(232, 277);
+            ttDTP.Margin = new Padding(3, 4, 3, 4);
+            ttDTP.Name = "ttDTP";
+            ttDTP.Size = new Size(228, 27);
+            ttDTP.TabIndex = 16;
             // 
-            // textBox1
+            // su1TB
             // 
-            textBox1.Location = new Point(497, 245);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(132, 27);
-            textBox1.TabIndex = 17;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(686, 245);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(131, 27);
-            textBox2.TabIndex = 18;
+            su1TB.Location = new Point(688, 277);
+            su1TB.Margin = new Padding(3, 4, 3, 4);
+            su1TB.Name = "su1TB";
+            su1TB.Size = new Size(131, 27);
+            su1TB.TabIndex = 18;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(230, 221);
+            label1.Location = new Point(499, 255);
             label1.Name = "label1";
-            label1.Size = new Size(41, 18);
+            label1.Size = new Size(34, 18);
             label1.TabIndex = 19;
-            label1.Text = "Date";
+            label1.Text = "Day";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(497, 221);
+            label5.Location = new Point(232, 255);
             label5.Name = "label5";
             label5.Size = new Size(43, 18);
             label5.TabIndex = 20;
@@ -302,41 +215,17 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(686, 221);
+            label6.Location = new Point(688, 253);
             label6.Name = "label6";
             label6.Size = new Size(62, 18);
             label6.TabIndex = 21;
             label6.Text = "Subject";
             // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new Point(230, 284);
-            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(228, 27);
-            dateTimePicker2.TabIndex = 22;
-            // 
-            // dateTimePicker3
-            // 
-            dateTimePicker3.Location = new Point(230, 323);
-            dateTimePicker3.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(228, 27);
-            dateTimePicker3.TabIndex = 23;
-            // 
-            // dateTimePicker4
-            // 
-            dateTimePicker4.Location = new Point(230, 361);
-            dateTimePicker4.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(228, 27);
-            dateTimePicker4.TabIndex = 24;
-            // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(230, 73);
+            label7.Location = new Point(230, 96);
             label7.Name = "label7";
             label7.Size = new Size(52, 18);
             label7.TabIndex = 25;
@@ -346,288 +235,167 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(533, 73);
+            label8.Location = new Point(499, 96);
             label8.Name = "label8";
             label8.Size = new Size(47, 18);
             label8.TabIndex = 26;
             label8.Text = "Class";
-            // 
-            // checkBox10
-            // 
-            checkBox10.AutoSize = true;
-            checkBox10.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox10.Location = new Point(590, 173);
-            checkBox10.Margin = new Padding(3, 4, 3, 4);
-            checkBox10.Name = "checkBox10";
-            checkBox10.Size = new Size(40, 21);
-            checkBox10.TabIndex = 72;
-            checkBox10.Text = "E";
-            checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            checkBox9.AutoSize = true;
-            checkBox9.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox9.Location = new Point(590, 148);
-            checkBox9.Margin = new Padding(3, 4, 3, 4);
-            checkBox9.Name = "checkBox9";
-            checkBox9.Size = new Size(41, 21);
-            checkBox9.TabIndex = 71;
-            checkBox9.Text = "D";
-            checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            checkBox8.AutoSize = true;
-            checkBox8.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox8.Location = new Point(590, 123);
-            checkBox8.Margin = new Padding(3, 4, 3, 4);
-            checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(41, 21);
-            checkBox8.TabIndex = 70;
-            checkBox8.Text = "C";
-            checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            checkBox7.AutoSize = true;
-            checkBox7.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox7.Location = new Point(590, 97);
-            checkBox7.Margin = new Padding(3, 4, 3, 4);
-            checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(40, 21);
-            checkBox7.TabIndex = 69;
-            checkBox7.Text = "B";
-            checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            checkBox6.AutoSize = true;
-            checkBox6.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox6.Location = new Point(590, 73);
-            checkBox6.Margin = new Padding(3, 4, 3, 4);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(39, 21);
-            checkBox6.TabIndex = 68;
-            checkBox6.Text = "A";
-            checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            checkBox5.AutoSize = true;
-            checkBox5.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox5.Location = new Point(293, 161);
-            checkBox5.Margin = new Padding(3, 4, 3, 4);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(82, 21);
-            checkBox5.TabIndex = 67;
-            checkBox5.Text = "Grade 5";
-            checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox4.Location = new Point(293, 139);
-            checkBox4.Margin = new Padding(3, 4, 3, 4);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(82, 21);
-            checkBox4.TabIndex = 66;
-            checkBox4.Text = "Grade 4";
-            checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox3.Location = new Point(293, 116);
-            checkBox3.Margin = new Padding(3, 4, 3, 4);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(82, 21);
-            checkBox3.TabIndex = 65;
-            checkBox3.Text = "Grade 3";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox2.Location = new Point(293, 92);
-            checkBox2.Margin = new Padding(3, 4, 3, 4);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(82, 21);
-            checkBox2.TabIndex = 64;
-            checkBox2.Text = "Grade 2";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(293, 68);
-            checkBox1.Margin = new Padding(3, 4, 3, 4);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(82, 21);
-            checkBox1.TabIndex = 63;
-            checkBox1.Text = "Grade 1";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker5
-            // 
-            dateTimePicker5.Location = new Point(230, 400);
-            dateTimePicker5.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker5.Name = "dateTimePicker5";
-            dateTimePicker5.Size = new Size(228, 27);
-            dateTimePicker5.TabIndex = 73;
-            // 
-            // dateTimePicker6
-            // 
-            dateTimePicker6.Location = new Point(230, 439);
-            dateTimePicker6.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker6.Name = "dateTimePicker6";
-            dateTimePicker6.Size = new Size(228, 27);
-            dateTimePicker6.TabIndex = 74;
-            // 
-            // dateTimePicker7
-            // 
-            dateTimePicker7.Location = new Point(230, 477);
-            dateTimePicker7.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker7.Name = "dateTimePicker7";
-            dateTimePicker7.Size = new Size(228, 27);
-            dateTimePicker7.TabIndex = 75;
-            // 
-            // dateTimePicker8
-            // 
-            dateTimePicker8.Location = new Point(230, 516);
-            dateTimePicker8.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker8.Name = "dateTimePicker8";
-            dateTimePicker8.Size = new Size(228, 27);
-            dateTimePicker8.TabIndex = 76;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(497, 284);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(132, 27);
-            textBox3.TabIndex = 77;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(497, 323);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(132, 27);
-            textBox4.TabIndex = 78;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(497, 361);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(132, 27);
-            textBox5.TabIndex = 79;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(497, 399);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(132, 27);
-            textBox6.TabIndex = 80;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(497, 437);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(132, 27);
-            textBox7.TabIndex = 81;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(497, 476);
-            textBox8.Margin = new Padding(3, 4, 3, 4);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(132, 27);
-            textBox8.TabIndex = 82;
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(497, 516);
-            textBox9.Margin = new Padding(3, 4, 3, 4);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(132, 27);
-            textBox9.TabIndex = 83;
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(686, 284);
-            textBox10.Margin = new Padding(3, 4, 3, 4);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(131, 27);
-            textBox10.TabIndex = 84;
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(686, 323);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(131, 27);
-            textBox11.TabIndex = 85;
-            // 
-            // textBox12
-            // 
-            textBox12.Location = new Point(686, 361);
-            textBox12.Margin = new Padding(3, 4, 3, 4);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(131, 27);
-            textBox12.TabIndex = 86;
-            // 
-            // textBox13
-            // 
-            textBox13.Location = new Point(686, 400);
-            textBox13.Margin = new Padding(3, 4, 3, 4);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(131, 27);
-            textBox13.TabIndex = 87;
-            // 
-            // textBox14
-            // 
-            textBox14.Location = new Point(686, 437);
-            textBox14.Margin = new Padding(3, 4, 3, 4);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(131, 27);
-            textBox14.TabIndex = 88;
-            // 
-            // textBox15
-            // 
-            textBox15.Location = new Point(686, 476);
-            textBox15.Margin = new Padding(3, 4, 3, 4);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(131, 27);
-            textBox15.TabIndex = 89;
-            // 
-            // textBox16
-            // 
-            textBox16.Location = new Point(686, 516);
-            textBox16.Margin = new Padding(3, 4, 3, 4);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(131, 27);
-            textBox16.TabIndex = 90;
             // 
             // button7
             // 
             button7.BackColor = Color.Teal;
             button7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(713, 600);
+            button7.Location = new Point(704, 350);
             button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
             button7.Size = new Size(115, 39);
             button7.TabIndex = 91;
             button7.Text = "ADD";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
+            // day1
+            // 
+            day1.FormattingEnabled = true;
+            day1.Items.AddRange(new object[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday", "Sunday" });
+            day1.Location = new Point(480, 276);
+            day1.Name = "day1";
+            day1.Size = new Size(151, 28);
+            day1.TabIndex = 92;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(radioButton3);
+            groupBox2.Controls.Add(radioButton7);
+            groupBox2.Controls.Add(radioButton4);
+            groupBox2.Controls.Add(radioButton6);
+            groupBox2.Controls.Add(radioButton5);
+            groupBox2.Location = new Point(288, 66);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(125, 173);
+            groupBox2.TabIndex = 104;
+            groupBox2.TabStop = false;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(24, 26);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(82, 24);
+            radioButton3.TabIndex = 71;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Grade 1";
+            radioButton3.UseVisualStyleBackColor = true;
+            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
+            // 
+            // radioButton7
+            // 
+            radioButton7.AutoSize = true;
+            radioButton7.Location = new Point(24, 146);
+            radioButton7.Name = "radioButton7";
+            radioButton7.Size = new Size(82, 24);
+            radioButton7.TabIndex = 75;
+            radioButton7.TabStop = true;
+            radioButton7.Text = "Grade 5";
+            radioButton7.UseVisualStyleBackColor = true;
+            radioButton7.CheckedChanged += radioButton7_CheckedChanged;
+            // 
+            // radioButton4
+            // 
+            radioButton4.AutoSize = true;
+            radioButton4.Location = new Point(24, 56);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(82, 24);
+            radioButton4.TabIndex = 72;
+            radioButton4.TabStop = true;
+            radioButton4.Text = "Grade 2";
+            radioButton4.UseVisualStyleBackColor = true;
+            radioButton4.CheckedChanged += radioButton4_CheckedChanged;
+            // 
+            // radioButton6
+            // 
+            radioButton6.AutoSize = true;
+            radioButton6.Location = new Point(24, 116);
+            radioButton6.Name = "radioButton6";
+            radioButton6.Size = new Size(82, 24);
+            radioButton6.TabIndex = 74;
+            radioButton6.TabStop = true;
+            radioButton6.Text = "Grade 4";
+            radioButton6.UseVisualStyleBackColor = true;
+            radioButton6.CheckedChanged += radioButton6_CheckedChanged;
+            // 
+            // radioButton5
+            // 
+            radioButton5.AutoSize = true;
+            radioButton5.Location = new Point(24, 86);
+            radioButton5.Name = "radioButton5";
+            radioButton5.Size = new Size(82, 24);
+            radioButton5.TabIndex = 73;
+            radioButton5.TabStop = true;
+            radioButton5.Text = "Grade 3";
+            radioButton5.UseVisualStyleBackColor = true;
+            radioButton5.CheckedChanged += radioButton5_CheckedChanged;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(radioButton11);
+            groupBox3.Controls.Add(radioButton10);
+            groupBox3.Controls.Add(radioButton9);
+            groupBox3.Controls.Add(radioButton8);
+            groupBox3.Location = new Point(552, 66);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(129, 152);
+            groupBox3.TabIndex = 105;
+            groupBox3.TabStop = false;
+            // 
+            // radioButton11
+            // 
+            radioButton11.AutoSize = true;
+            radioButton11.Location = new Point(23, 114);
+            radioButton11.Name = "radioButton11";
+            radioButton11.Size = new Size(41, 24);
+            radioButton11.TabIndex = 79;
+            radioButton11.TabStop = true;
+            radioButton11.Text = "D";
+            radioButton11.UseVisualStyleBackColor = true;
+            radioButton11.CheckedChanged += radioButton11_CheckedChanged;
+            // 
+            // radioButton10
+            // 
+            radioButton10.AutoSize = true;
+            radioButton10.Location = new Point(23, 84);
+            radioButton10.Name = "radioButton10";
+            radioButton10.Size = new Size(39, 24);
+            radioButton10.TabIndex = 78;
+            radioButton10.TabStop = true;
+            radioButton10.Text = "C";
+            radioButton10.UseVisualStyleBackColor = true;
+            radioButton10.CheckedChanged += radioButton10_CheckedChanged;
+            // 
+            // radioButton9
+            // 
+            radioButton9.AutoSize = true;
+            radioButton9.Location = new Point(23, 54);
+            radioButton9.Name = "radioButton9";
+            radioButton9.Size = new Size(39, 24);
+            radioButton9.TabIndex = 77;
+            radioButton9.TabStop = true;
+            radioButton9.Text = "B";
+            radioButton9.UseVisualStyleBackColor = true;
+            radioButton9.CheckedChanged += radioButton9_CheckedChanged;
+            // 
+            // radioButton8
+            // 
+            radioButton8.AutoSize = true;
+            radioButton8.Location = new Point(23, 26);
+            radioButton8.Name = "radioButton8";
+            radioButton8.Size = new Size(40, 24);
+            radioButton8.TabIndex = 76;
+            radioButton8.TabStop = true;
+            radioButton8.Text = "A";
+            radioButton8.UseVisualStyleBackColor = true;
+            radioButton8.CheckedChanged += radioButton8_CheckedChanged;
             // 
             // Addstudenttimetable
             // 
@@ -635,46 +403,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(205, 243, 245);
             ClientSize = new Size(842, 743);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(day1);
             Controls.Add(button7);
-            Controls.Add(textBox16);
-            Controls.Add(textBox15);
-            Controls.Add(textBox14);
-            Controls.Add(textBox13);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker8);
-            Controls.Add(dateTimePicker7);
-            Controls.Add(dateTimePicker6);
-            Controls.Add(dateTimePicker5);
-            Controls.Add(checkBox10);
-            Controls.Add(checkBox9);
-            Controls.Add(checkBox8);
-            Controls.Add(checkBox7);
-            Controls.Add(checkBox6);
-            Controls.Add(checkBox5);
-            Controls.Add(checkBox4);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(dateTimePicker4);
-            Controls.Add(dateTimePicker3);
-            Controls.Add(dateTimePicker2);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(su1TB);
+            Controls.Add(ttDTP);
             Controls.Add(panel3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -687,6 +426,10 @@
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -696,55 +439,31 @@
         private Label label14;
         private PictureBox pictureBox1;
         private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
         private Button button1;
         private Panel panel2;
         private Panel panel1;
         private Panel panel3;
         private Button button8;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private DateTimePicker ttDTP;
+        private TextBox su1TB;
         private Label label1;
         private Label label5;
         private Label label6;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker4;
         private Label label7;
         private Label label8;
-        private CheckBox checkBox10;
-        private CheckBox checkBox9;
-        private CheckBox checkBox8;
-        private CheckBox checkBox7;
-        private CheckBox checkBox6;
-        private CheckBox checkBox5;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private DateTimePicker dateTimePicker5;
-        private DateTimePicker dateTimePicker6;
-        private DateTimePicker dateTimePicker7;
-        private DateTimePicker dateTimePicker8;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
         private Button button7;
+        private ComboBox day1;
+        private GroupBox groupBox2;
+        private RadioButton radioButton3;
+        private RadioButton radioButton7;
+        private RadioButton radioButton4;
+        private RadioButton radioButton6;
+        private RadioButton radioButton5;
+        private GroupBox groupBox3;
+        private RadioButton radioButton11;
+        private RadioButton radioButton10;
+        private RadioButton radioButton9;
+        private RadioButton radioButton8;
     }
 }
