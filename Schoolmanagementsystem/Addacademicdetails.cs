@@ -34,14 +34,7 @@ namespace Schoolmanagementsystem
 
         private void button9_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            DialogResult re = ofd.ShowDialog();
-            if (re == DialogResult.OK)
-            {
-                i = Image.FromFile(ofd.FileName);
-                b = (Bitmap)i;
-                pictureBox1.Image = b;
-            }
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
