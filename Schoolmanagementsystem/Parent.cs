@@ -28,10 +28,11 @@ namespace Schoolmanagementsystem
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
             mySqlConnection.Open();
-            if(PIDTB.Text != "") { 
+            if (PIDTB.Text != "")
+            {
                 MySqlCommand cmd = new MySqlCommand("SELECT Name,NIC,DOB,Gender,Religion,Occupation,SID FROM parent WHERE ParentID = @ParentID OR SID=@SID", mySqlConnection);
                 cmd.Parameters.AddWithValue("@ParentID", PIDTB.Text);
-                using(MySqlDataReader reader = cmd.ExecuteReader())
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
@@ -51,6 +52,32 @@ namespace Schoolmanagementsystem
                 }
             }
             mySqlConnection.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Student_result student_Result = new Student_result();
+            student_Result.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            timetable tt = new timetable();
+            tt.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }

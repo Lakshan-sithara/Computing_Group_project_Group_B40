@@ -31,10 +31,6 @@
             label4 = new Label();
             pictureBox1 = new PictureBox();
             button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
@@ -93,73 +89,18 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(20, 35, 138);
+            button6.BackColor = Color.FromArgb(192, 0, 0);
             button6.BackgroundImageLayout = ImageLayout.None;
             button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 331);
+            button6.Location = new Point(0, 530);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(215, 52);
             button6.TabIndex = 6;
-            button6.Text = "Admin";
+            button6.Text = "LogOut";
             button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(20, 35, 138);
-            button5.BackgroundImageLayout = ImageLayout.None;
-            button5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 276);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(215, 52);
-            button5.TabIndex = 5;
-            button5.Text = "Parennt";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(20, 35, 138);
-            button4.BackgroundImageLayout = ImageLayout.None;
-            button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 221);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(215, 52);
-            button4.TabIndex = 4;
-            button4.Text = "Non-Academic Staff";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(20, 35, 138);
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 167);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(215, 52);
-            button3.TabIndex = 3;
-            button3.Text = "Academic Staff";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(20, 35, 138);
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 112);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(215, 52);
-            button2.TabIndex = 2;
-            button2.Text = "Student";
-            button2.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button1
             // 
@@ -167,13 +108,14 @@
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 57);
+            button1.Location = new Point(0, 67);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(215, 52);
             button1.TabIndex = 1;
-            button1.Text = "Dashboard";
+            button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -190,10 +132,6 @@
             // 
             panel1.BackColor = Color.FromArgb(25, 35, 138);
             panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
@@ -253,10 +191,11 @@
             button7.Location = new Point(226, 285);
             button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
-            button7.Size = new Size(157, 43);
+            button7.Size = new Size(157, 66);
             button7.TabIndex = 13;
             button7.Text = "View Student's Results";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // panel4
             // 
@@ -426,13 +365,14 @@
             button8.BackColor = Color.MidnightBlue;
             button8.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
-            button8.Location = new Point(217, 335);
+            button8.Location = new Point(226, 359);
             button8.Margin = new Padding(3, 4, 3, 4);
             button8.Name = "button8";
-            button8.Size = new Size(171, 43);
+            button8.Size = new Size(157, 68);
             button8.TabIndex = 16;
             button8.Text = "View Student's Timetable\r\n";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // Parent
             // 
@@ -467,10 +407,6 @@
         private Label label4;
         private PictureBox pictureBox1;
         private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
         private Button button1;
         private Panel panel2;
         private Panel panel1;
