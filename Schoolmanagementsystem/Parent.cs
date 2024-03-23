@@ -29,8 +29,28 @@ namespace Schoolmanagementsystem
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
             mySqlConnection.Open();
             if(PIDTB.Text != "") { 
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM parent WHERE ParentID = @ParentID", mySqlConnection);
+                MySqlCommand cmd = new MySqlCommand("SELECT Name,NIC,DOB,Gender,Religion,Occupation,SID FROM parent WHERE ParentID = @ParentID OR SID=@SID", mySqlConnection);
+                cmd.Parameters.AddWithValue("@ParentID", PIDTB.Text);
+                using(MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        nameTB.Text = reader.GetString("Name");
+                        NICTB.Text = reader.GetString("NIC");
+                        DOBTB.Text = reader.GetString("DOB");
+                        genderTB.Text = reader.GetString("Gender");
+                        religionTB.Text = reader.GetString("Religion");
+                        occupationTB.Text = reader.GetString("Occupation");
+                        SIDTB.Text = reader.GetString("SID");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Parant ID No found");
+                    }
+                }
             }
+            mySqlConnection.Close();
         }
     }
 }

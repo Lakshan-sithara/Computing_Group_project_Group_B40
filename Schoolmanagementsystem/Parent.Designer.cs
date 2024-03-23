@@ -46,19 +46,19 @@
             panel4 = new Panel();
             PIDTB = new TextBox();
             label6 = new Label();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            SIDTB = new TextBox();
+            occupationTB = new TextBox();
+            religionTB = new TextBox();
+            genderTB = new TextBox();
+            DOBTB = new TextBox();
+            NICTB = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label5 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            nameTB = new TextBox();
             label1 = new Label();
             button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -263,19 +263,19 @@
             panel4.BackColor = Color.FromArgb(205, 243, 245);
             panel4.Controls.Add(PIDTB);
             panel4.Controls.Add(label6);
-            panel4.Controls.Add(textBox7);
-            panel4.Controls.Add(textBox6);
-            panel4.Controls.Add(textBox5);
-            panel4.Controls.Add(textBox4);
-            panel4.Controls.Add(textBox3);
-            panel4.Controls.Add(textBox2);
+            panel4.Controls.Add(SIDTB);
+            panel4.Controls.Add(occupationTB);
+            panel4.Controls.Add(religionTB);
+            panel4.Controls.Add(genderTB);
+            panel4.Controls.Add(DOBTB);
+            panel4.Controls.Add(NICTB);
             panel4.Controls.Add(label10);
             panel4.Controls.Add(label9);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label2);
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(nameTB);
             panel4.Controls.Add(label1);
             panel4.Location = new Point(392, 84);
             panel4.Margin = new Padding(3, 4, 3, 4);
@@ -301,53 +301,53 @@
             label6.TabIndex = 26;
             label6.Text = "Enter PID";
             // 
-            // textBox7
+            // SIDTB
             // 
-            textBox7.Location = new Point(191, 269);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(246, 27);
-            textBox7.TabIndex = 25;
+            SIDTB.Location = new Point(191, 269);
+            SIDTB.Margin = new Padding(3, 4, 3, 4);
+            SIDTB.Name = "SIDTB";
+            SIDTB.Size = new Size(246, 27);
+            SIDTB.TabIndex = 25;
             // 
-            // textBox6
+            // occupationTB
             // 
-            textBox6.Location = new Point(191, 235);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(246, 27);
-            textBox6.TabIndex = 24;
+            occupationTB.Location = new Point(191, 235);
+            occupationTB.Margin = new Padding(3, 4, 3, 4);
+            occupationTB.Name = "occupationTB";
+            occupationTB.Size = new Size(246, 27);
+            occupationTB.TabIndex = 24;
             // 
-            // textBox5
+            // religionTB
             // 
-            textBox5.Location = new Point(191, 200);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(246, 27);
-            textBox5.TabIndex = 23;
+            religionTB.Location = new Point(191, 200);
+            religionTB.Margin = new Padding(3, 4, 3, 4);
+            religionTB.Name = "religionTB";
+            religionTB.Size = new Size(246, 27);
+            religionTB.TabIndex = 23;
             // 
-            // textBox4
+            // genderTB
             // 
-            textBox4.Location = new Point(191, 165);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(246, 27);
-            textBox4.TabIndex = 22;
+            genderTB.Location = new Point(191, 165);
+            genderTB.Margin = new Padding(3, 4, 3, 4);
+            genderTB.Name = "genderTB";
+            genderTB.Size = new Size(246, 27);
+            genderTB.TabIndex = 22;
             // 
-            // textBox3
+            // DOBTB
             // 
-            textBox3.Location = new Point(191, 132);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(246, 27);
-            textBox3.TabIndex = 21;
+            DOBTB.Location = new Point(191, 132);
+            DOBTB.Margin = new Padding(3, 4, 3, 4);
+            DOBTB.Name = "DOBTB";
+            DOBTB.Size = new Size(246, 27);
+            DOBTB.TabIndex = 21;
             // 
-            // textBox2
+            // NICTB
             // 
-            textBox2.Location = new Point(191, 99);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(246, 27);
-            textBox2.TabIndex = 20;
+            NICTB.Location = new Point(191, 99);
+            NICTB.Margin = new Padding(3, 4, 3, 4);
+            NICTB.Name = "NICTB";
+            NICTB.Size = new Size(246, 27);
+            NICTB.TabIndex = 20;
             // 
             // label10
             // 
@@ -403,14 +403,14 @@
             label2.TabIndex = 14;
             label2.Text = "ID Number";
             // 
-            // textBox1
+            // nameTB
             // 
-            textBox1.Location = new Point(191, 65);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(246, 27);
-            textBox1.TabIndex = 13;
-            textBox1.TextChanged += textBox1_TextChanged;
+            nameTB.Location = new Point(191, 65);
+            nameTB.Margin = new Padding(3, 4, 3, 4);
+            nameTB.Name = "nameTB";
+            nameTB.Size = new Size(246, 27);
+            nameTB.TabIndex = 13;
+            nameTB.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -479,19 +479,19 @@
         private Label label3;
         private Button button7;
         private Panel panel4;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox SIDTB;
+        private TextBox occupationTB;
+        private TextBox religionTB;
+        private TextBox genderTB;
+        private TextBox DOBTB;
+        private TextBox NICTB;
         private Label label10;
         private Label label9;
         private Label label8;
         private Label label7;
         private Label label5;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox nameTB;
         private Label label1;
         private Button button8;
         private Button button9;
