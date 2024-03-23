@@ -65,6 +65,8 @@
             label20 = new Label();
             nameTB = new TextBox();
             label21 = new Label();
+            usernameTB = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
@@ -171,6 +173,7 @@
             button8.TabIndex = 13;
             button8.Text = "X";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // label2
             // 
@@ -240,6 +243,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(205, 243, 245);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(usernameTB);
             panel2.Controls.Add(AddressTB);
             panel2.Controls.Add(label13);
             panel2.Controls.Add(label14);
@@ -353,6 +358,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "female";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
@@ -364,6 +370,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "male";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // DOBDTB
             // 
@@ -475,6 +482,23 @@
             label21.TabIndex = 1;
             label21.Text = "Name";
             // 
+            // usernameTB
+            // 
+            usernameTB.Location = new Point(130, 345);
+            usernameTB.Margin = new Padding(3, 4, 3, 4);
+            usernameTB.Name = "usernameTB";
+            usernameTB.Size = new Size(246, 27);
+            usernameTB.TabIndex = 35;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(19, 348);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 20);
+            label5.TabIndex = 36;
+            label5.Text = "Username";
+            // 
             // Addacademicdetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -491,6 +515,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Addacademicdetails";
             Text = "Addacademicdetails";
+            Load += Addacademicdetails_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -543,5 +568,7 @@
         private Label label20;
         private TextBox nameTB;
         private Label label21;
+        private Label label5;
+        private TextBox usernameTB;
     }
 }

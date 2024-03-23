@@ -41,8 +41,8 @@ namespace Schoolmanagementsystem
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Addacademicdetails addacademic = new Addacademicdetails();
-            addacademic.Show();
+            Addacademicdetails addacademicdetails = new Addacademicdetails();
+            addacademicdetails.Show();
             this.Hide();
         }
 
@@ -87,6 +87,13 @@ namespace Schoolmanagementsystem
         private void button11_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Addacademicdetails addacademicdetails = new Addacademicdetails();
+            addacademicdetails.Show();
+            this.Hide();
         }
     }
 }

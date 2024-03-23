@@ -168,25 +168,39 @@ namespace Schoolmanagementsystem
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //add student details
+            // Add student details
             string connString = "server=" + server + ";database=" + database + ";uid=" + uid + ";password=" + password;
             MySqlConnection conn = new MySqlConnection(connString);
             try
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO student (Name, Admission_number, DOB, Religion, Address, Father_name, Mother_name, gender,Grade,Class,Addmission_date) " +
-                                     "VALUES ('" + nameTB.Text + "', '" + AdmiNuTB.Text + "', '" + DOBDTP.Value.ToString("yyyy-MM-dd") + "', '" + religionTB.Text + "', " +
-                                     "'" + addressTB.Text + "', '" + fatherTB.Text + "', '" + motherTB.Text + "', '" + Gender + "','" + grade + "','" + Class + ",'" + addmission_date_DTP.Value.ToString("yyyy-MM-dd") + "')";
-                MySqlCommand command = new MySqlCommand(insertQuery, conn);
+                string insertQuery = "INSERT INTO `student` (Name, Admission_number, DOB, Religion, Address, Father_name, Mother_name, Gender, Grade, Class, Admission_date,Username) " +
+                                     "VALUES (@Name, @AdmissionNumber, @DOB, @Religion, @Address, @FatherName, @MotherName, @Gender, @Grade, @Class, @AdmissionDate,@username)";
+                using (MySqlCommand command = new MySqlCommand(insertQuery, conn))
+                {
+                    // Add parameters
+                    command.Parameters.AddWithValue("@Name", nameTB.Text);
+                    command.Parameters.AddWithValue("@AdmissionNumber", AdmiNuTB.Text);
+                    command.Parameters.AddWithValue("@DOB", DOBDTP.Value);
+                    command.Parameters.AddWithValue("@Religion", religionTB.Text);
+                    command.Parameters.AddWithValue("@Address", addressTB.Text);
+                    command.Parameters.AddWithValue("@FatherName", fatherTB.Text);
+                    command.Parameters.AddWithValue("@MotherName", motherTB.Text);
+                    command.Parameters.AddWithValue("@Gender", Gender);
+                    command.Parameters.AddWithValue("@Grade", grade);
+                    command.Parameters.AddWithValue("@Class", Class);
+                    command.Parameters.AddWithValue("@AdmissionDate", addmission_date_DTP.Value);
+                    command.Parameters.AddWithValue("@username", unameTB.Text);
 
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Student details added successfully");
-                }
-                else
-                {
-                    MessageBox.Show("Student details not added");
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Student details added successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Student details not added");
+                    }
                 }
             }
             catch (Exception ex)
@@ -197,6 +211,9 @@ namespace Schoolmanagementsystem
             {
                 conn.Close();
             }
+
+
+
 
         }
 
@@ -288,7 +305,7 @@ namespace Schoolmanagementsystem
 
                 string updateQuery = "UPDATE student SET Name = @Name, DOB = @DOB, Religion = @Religion, Address = @Address, " +
                                      "Father_name = @FatherName, Mother_name = @MotherName, Gender = @Gender, " +
-                                     "Grade = @Grade, Class = @Class WHERE Admission_number = @AdmissionNumber";
+                                     "Grade = @Grade, Class = @Class,Username=@username WHERE Admission_number = @AdmissionNumber";
 
                 MySqlCommand command = new MySqlCommand(updateQuery, conn);
                 command.Parameters.AddWithValue("@Name", nameTB.Text);
@@ -301,6 +318,7 @@ namespace Schoolmanagementsystem
                 command.Parameters.AddWithValue("@Grade", grade);
                 command.Parameters.AddWithValue("@Class", Class);
                 command.Parameters.AddWithValue("@AdmissionNumber", AdmiNuTB.Text);
+                command.Parameters.AddWithValue("@username", unameTB.Text);
 
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)

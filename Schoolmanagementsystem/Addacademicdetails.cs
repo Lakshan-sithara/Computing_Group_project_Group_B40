@@ -24,7 +24,7 @@ namespace Schoolmanagementsystem
         Bitmap b;
         public Addacademicdetails()
         {
-            InitializeComponent();
+          InitializeComponent();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -57,16 +57,16 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO academic (Name,NIC,DOB,Gender,Religion,AID,Admission_date,Mobile_no,Address) VALUES('" + nameTB.Text + "','" + NICTB.Text + "','" + DOBDTB + "','" + gender + "','" + ReTB + "','" + AIDTB + "','" + ADDTP + "','" + MobileTB + "','" + AddressTB + "') ";
+                string insertQuery = "INSERT INTO academic (Name,NIC,DOB,Gender,Religion,AID,Admission_date,Mobile_no,Address,Username) VALUES('" + nameTB.Text + "','" + NICTB.Text + "','" + DOBDTB + "','" + gender + "','" + ReTB + "','" + AIDTB.Text + "','" + ADDTP.Value + "','" + MobileTB.Text + "','" + AddressTB.Text + "','"+usernameTB.Text+"') ";
                 MySqlCommand cmd = new MySqlCommand(insertQuery, conn);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Student details added successfully");
+                    MessageBox.Show("Academic details added successfully");
                 }
                 else
                 {
-                    MessageBox.Show("Student details not added");
+                    MessageBox.Show("Academic details not added");
                 }
             }
             catch (Exception ex)
@@ -91,7 +91,7 @@ namespace Schoolmanagementsystem
 
                 // Assuming AID is a unique identifier in your academic table
                 string updateQuery = "UPDATE academic SET Name = @Name, NIC = @NIC, DOB = @DOB, Gender = @Gender, Religion = @Religion, " +
-                                     "Admission_date = @AdmissionDate, Mobile_no = @MobileNo, Address = @Address WHERE AID = @AID";
+                                     "Admission_date = @AdmissionDate, Mobile_no = @MobileNo, Address = @Address,Username=@username WHERE AID = @AID";
 
                 MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
                 cmd.Parameters.AddWithValue("@Name", nameTB.Text);
@@ -103,6 +103,7 @@ namespace Schoolmanagementsystem
                 cmd.Parameters.AddWithValue("@MobileNo", MobileTB.Text);
                 cmd.Parameters.AddWithValue("@Address", AddressTB.Text);
                 cmd.Parameters.AddWithValue("@AID", AIDTB.Text);
+                cmd.Parameters.AddWithValue("@username", usernameTB.Text);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
@@ -171,6 +172,26 @@ namespace Schoolmanagementsystem
             Admin admin = new Admin();
             admin.Show();
             this.Hide();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "female";
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "male";
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Addacademicdetails_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

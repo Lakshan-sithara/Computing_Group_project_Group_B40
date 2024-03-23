@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -55,8 +56,36 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO parant (Name,NIC,DOB,Gender,Religion,Mobile_no,Address,Occupation,SID,relationship,PID) VALUES('" + nameTB.Text + "','" + NICTB.Text + "','" + DOBDTB + "','" + gender + "','" + ReTB.Text + "','" + MobileTB + "','" + AddressTB.Text + "','" + OccTB.Text + "','" + CADTB + "','" + relationTB.Text + "','" + PIDTB + "') ";
+
+                // Check if the SID exists in the student table
+                string checkSIDQuery = "SELECT COUNT(*) FROM student WHERE SID = @SID";
+                MySqlCommand checkSIDCmd = new MySqlCommand(checkSIDQuery, conn);
+                checkSIDCmd.Parameters.AddWithValue("@SID", CADTB.Text);
+                int studentCount = Convert.ToInt32(checkSIDCmd.ExecuteScalar());
+
+                if (studentCount == 0)
+                {
+                    MessageBox.Show("Error: Student ID does not exist in the database.");
+                    return;
+                }
+
+                // Insert parent details into the parant table
+                string insertQuery = "INSERT INTO parant (Name, NIC, DOB, Gender, Religion, Mobile_no, Address, Occupation, SID, Relationship, PID,Username) " +
+                                     "VALUES (@Name, @NIC, @DOB, @Gender, @Religion, @MobileNo, @Address, @Occupation, @SID, @Relationship, @PID,@username)";
                 MySqlCommand cmd = new MySqlCommand(insertQuery, conn);
+                cmd.Parameters.AddWithValue("@Name", nameTB.Text);
+                cmd.Parameters.AddWithValue("@NIC", NICTB.Text);
+                cmd.Parameters.AddWithValue("@DOB", DOBDTB.Value);
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                cmd.Parameters.AddWithValue("@Religion", ReTB.Text);
+                cmd.Parameters.AddWithValue("@MobileNo", MobileTB.Text);
+                cmd.Parameters.AddWithValue("@Address", AddressTB.Text);
+                cmd.Parameters.AddWithValue("@Occupation", OccTB.Text);
+                cmd.Parameters.AddWithValue("@SID", CADTB.Text);
+                cmd.Parameters.AddWithValue("@Relationship", relationTB.Text);
+                cmd.Parameters.AddWithValue("@PID", PIDTB.Text);
+                cmd.Parameters.AddWithValue("@username", unameTB.Text);
+
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
@@ -75,6 +104,7 @@ namespace Schoolmanagementsystem
             {
                 conn.Close();
             }
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -98,8 +128,8 @@ namespace Schoolmanagementsystem
                 conn.Open();
 
                 // Assuming AID is a unique identifier in your academic table
-                string updateQuery = "UPDATE patant SET Name = @Name, NIC = @NIC, DOB = @DOB, Gender = @Gender, Religion = @Religion, " +
-                                     "Mobile_no = @MobileNo, Address = @Address,Occupation= @Occupation,SID=@SID,relationship=@relationship WHERE AID = @AID";
+                string updateQuery = "UPDATE parant SET Name = @Name, NIC = @NIC, DOB = @DOB, Gender = @Gender, Religion = @Religion, " +
+                                     "Mobile_no = @MobileNo, Address = @Address, Occupation= @Occupation, SID = @SID, relationship = @relationship,Username=@username WHERE PID = @PID";
 
                 MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
                 cmd.Parameters.AddWithValue("@Name", nameTB.Text);
@@ -109,19 +139,20 @@ namespace Schoolmanagementsystem
                 cmd.Parameters.AddWithValue("@Religion", ReTB.Text);
                 cmd.Parameters.AddWithValue("@MobileNo", MobileTB.Text);
                 cmd.Parameters.AddWithValue("@Address", AddressTB.Text);
-                cmd.Parameters.AddWithValue("@Occupation", OccTB);
+                cmd.Parameters.AddWithValue("@Occupation", OccTB.Text);
                 cmd.Parameters.AddWithValue("@SID", CADTB.Text);
                 cmd.Parameters.AddWithValue("@relationship", relationTB.Text);
                 cmd.Parameters.AddWithValue("@PID", PIDTB.Text);
+                cmd.Parameters.AddWithValue("@username", unameTB.Text);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Parant details updated successfully");
+                    MessageBox.Show("Parent details updated successfully");
                 }
                 else
                 {
-                    MessageBox.Show("No parant record with the specified Academic ID found");
+                    MessageBox.Show("No parent record with the specified Academic ID found");
                 }
             }
             catch (Exception ex)
@@ -132,6 +163,7 @@ namespace Schoolmanagementsystem
             {
                 conn.Close();
             }
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -147,16 +179,16 @@ namespace Schoolmanagementsystem
                 string deleteQuery = "DELETE FROM parant WHERE PID = @PID";
 
                 MySqlCommand cmd = new MySqlCommand(deleteQuery, conn);
-                cmd.Parameters.AddWithValue("@AID", PIDTB.Text);
+                cmd.Parameters.AddWithValue("@PID", PIDTB.Text); // Ensure parameter name matches the one in the query
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Parant record deleted successfully");
+                    MessageBox.Show("Parent record deleted successfully");
                 }
                 else
                 {
-                    MessageBox.Show("No Parant record with the specified Academic ID found");
+                    MessageBox.Show("No Parent record with the specified PID found");
                 }
             }
             catch (Exception ex)
@@ -167,6 +199,7 @@ namespace Schoolmanagementsystem
             {
                 conn.Close();
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -183,8 +216,8 @@ namespace Schoolmanagementsystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-            admin.Show();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
             this.Hide();
         }
     }

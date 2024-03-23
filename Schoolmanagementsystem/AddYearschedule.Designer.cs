@@ -31,10 +31,6 @@
             label14 = new Label();
             pictureBox1 = new PictureBox();
             button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
@@ -83,73 +79,18 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(20, 35, 138);
+            button6.BackColor = Color.FromArgb(192, 0, 0);
             button6.BackgroundImageLayout = ImageLayout.None;
             button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 331);
+            button6.Location = new Point(0, 668);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(215, 52);
             button6.TabIndex = 6;
             button6.Text = "Admin";
             button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(20, 35, 138);
-            button5.BackgroundImageLayout = ImageLayout.None;
-            button5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 276);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(215, 52);
-            button5.TabIndex = 5;
-            button5.Text = "Parennt";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(20, 35, 138);
-            button4.BackgroundImageLayout = ImageLayout.None;
-            button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 221);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(215, 52);
-            button4.TabIndex = 4;
-            button4.Text = "Non-Academic Staff";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(20, 35, 138);
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 167);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(215, 52);
-            button3.TabIndex = 3;
-            button3.Text = "Academic Staff";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(20, 35, 138);
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 112);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(215, 52);
-            button2.TabIndex = 2;
-            button2.Text = "Student";
-            button2.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button1
             // 
@@ -157,13 +98,14 @@
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 57);
+            button1.Location = new Point(0, 84);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(215, 52);
             button1.TabIndex = 1;
-            button1.Text = "Dashboard";
+            button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -180,10 +122,6 @@
             // 
             panel1.BackColor = Color.FromArgb(25, 35, 138);
             panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
@@ -248,6 +186,7 @@
             // 
             // yearStart
             // 
+            yearStart.Format = DateTimePickerFormat.Short;
             yearStart.Location = new Point(345, 192);
             yearStart.Margin = new Padding(3, 4, 3, 4);
             yearStart.Name = "yearStart";
@@ -276,6 +215,7 @@
             // 
             // yearEnd
             // 
+            yearEnd.Format = DateTimePickerFormat.Short;
             yearEnd.Location = new Point(583, 192);
             yearEnd.Margin = new Padding(3, 4, 3, 4);
             yearEnd.Name = "yearEnd";
@@ -284,6 +224,7 @@
             // 
             // termStart
             // 
+            termStart.Format = DateTimePickerFormat.Short;
             termStart.Location = new Point(345, 340);
             termStart.Margin = new Padding(3, 4, 3, 4);
             termStart.Name = "termStart";
@@ -292,6 +233,7 @@
             // 
             // termEnd
             // 
+            termEnd.Format = DateTimePickerFormat.Short;
             termEnd.Location = new Point(583, 340);
             termEnd.Margin = new Padding(3, 4, 3, 4);
             termEnd.Name = "termEnd";
@@ -380,10 +322,6 @@
         private Label label14;
         private PictureBox pictureBox1;
         private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
         private Button button1;
         private Panel panel2;
         private Panel panel1;

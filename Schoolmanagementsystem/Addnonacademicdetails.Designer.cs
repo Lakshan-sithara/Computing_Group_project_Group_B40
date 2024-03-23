@@ -65,6 +65,8 @@
             pictureBox1 = new PictureBox();
             button9 = new Button();
             label12 = new Label();
+            usernameTB = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
@@ -206,6 +208,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(205, 243, 245);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(usernameTB);
             panel2.Controls.Add(AddressTB);
             panel2.Controls.Add(label13);
             panel2.Controls.Add(label14);
@@ -478,6 +482,23 @@
             label12.TabIndex = 70;
             label12.Text = "Add Photo";
             // 
+            // usernameTB
+            // 
+            usernameTB.Location = new Point(130, 357);
+            usernameTB.Margin = new Padding(3, 4, 3, 4);
+            usernameTB.Name = "usernameTB";
+            usernameTB.Size = new Size(246, 27);
+            usernameTB.TabIndex = 35;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(19, 360);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 20);
+            label5.TabIndex = 36;
+            label5.Text = "Username";
+            // 
             // Addnonacademicdetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -546,5 +567,7 @@
         private PictureBox pictureBox1;
         private Button button9;
         private Label label12;
+        private Label label5;
+        private TextBox usernameTB;
     }
 }

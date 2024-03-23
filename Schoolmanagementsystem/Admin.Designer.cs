@@ -47,7 +47,6 @@
             panel5 = new Panel();
             label2 = new Label();
             pictureBox3 = new PictureBox();
-            button8 = new Button();
             panel6 = new Panel();
             pictureBox5 = new PictureBox();
             label4 = new Label();
@@ -57,6 +56,7 @@
             label5 = new Label();
             button10 = new Button();
             button13 = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -275,9 +275,9 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(194, 218, 245);
+            panel5.Controls.Add(button1);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(pictureBox3);
-            panel5.Controls.Add(button8);
             panel5.Location = new Point(577, 81);
             panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
@@ -305,20 +305,6 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.FromArgb(66, 143, 168);
-            button8.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = Color.Black;
-            button8.Location = new Point(47, 187);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(106, 41);
-            button8.TabIndex = 3;
-            button8.Text = "Add deails";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
             // 
             // panel6
             // 
@@ -427,6 +413,20 @@
             button13.UseVisualStyleBackColor = false;
             button13.Click += button13_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(66, 143, 168);
+            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(40, 191);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(106, 41);
+            button1.TabIndex = 6;
+            button1.Text = "Add deails";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -486,7 +486,6 @@
         private Panel panel7;
         private Button button10;
         private Button button9;
-        private Button button8;
         private Button button7;
         private Label label2;
         private PictureBox pictureBox3;
@@ -496,5 +495,6 @@
         private PictureBox pictureBox5;
         private Button button11;
         private Button button13;
+        private Button button1;
     }
 }
