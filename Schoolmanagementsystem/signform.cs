@@ -139,7 +139,7 @@ namespace Schoolmanagementsystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid Username or Password");
             }
             finally
             {

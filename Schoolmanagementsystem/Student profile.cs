@@ -141,25 +141,34 @@ namespace Schoolmanagementsystem
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
             mySqlConnection.Open();
-            if (SnameTB.Text != "")
-            {
-                MySqlCommand command = new MySqlCommand("SELECT Name,Grade,Class,DOB,gender,Religion,Admission_date,Address FROM student WHERE SID = @student_id", mySqlConnection);
-                command.Parameters.AddWithValue("@student_id", SnameTB.Text);
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    SnameTB.Text = reader.GetString("Name");
-                    gradeTB.Text = reader.GetString("Grade");
-                    classTB.Text = reader.GetString("Class");
-                    DOBTB.Text = reader.GetString("DOB");
-                    genderTB.Text = reader.GetString("gender");
-                    religionTB.Text = reader.GetString("Religion");
-                    admissonTB.Text = reader.GetString("Admission_date");
-                    addressTB.Text = reader.GetString("Address");
 
+            if (SIDTB.Text != "")
+            {
+                MySqlCommand command = new MySqlCommand("SELECT Name, Grade, Class, DOB, gender, Religion, Admission_date, Address FROM student WHERE SID = @student_id", mySqlConnection);
+                command.Parameters.AddWithValue("@student_id", SIDTB.Text);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        nameTB.Text = reader.GetString("Name");
+                        gradeTB.Text = reader.GetString("Grade");
+                        classTB.Text = reader.GetString("Class");
+                        DOBTB.Text = reader.GetDateTime("DOB").ToString("yyyy-MM-dd"); // Convert DateTime to string with desired format
+                        genderTB.Text = reader.GetString("gender");
+                        religionTB.Text = reader.GetString("Religion");
+                        admissonTB.Text = reader.GetDateTime("Admission_date").ToString("yyyy-MM-dd"); // Convert DateTime to string with desired format
+                        addressTB.Text = reader.GetString("Address");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Student ID not found");
+                    }
                 }
-                mySqlConnection.Close();
             }
+
+            mySqlConnection.Close();
+            
         }
 
         private void Student_profile_Load(object sender, EventArgs e)
