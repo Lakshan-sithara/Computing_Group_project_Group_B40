@@ -46,8 +46,8 @@ namespace Schoolmanagementsystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Student_profile studentProfile = new Student_profile();
-            studentProfile.Show();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
             this.Hide();
         }
 

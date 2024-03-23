@@ -39,10 +39,9 @@
             label2 = new Label();
             label4 = new Label();
             label3 = new Label();
-            label12 = new Label();
-            button9 = new Button();
-            pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            label6 = new Label();
+            passwordTB = new TextBox();
             label5 = new Label();
             usernameTB = new TextBox();
             AddressTB = new TextBox();
@@ -67,13 +66,10 @@
             label20 = new Label();
             nameTB = new TextBox();
             label21 = new Label();
-            label6 = new Label();
-            passwordTB = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -208,40 +204,6 @@
             label3.TabIndex = 0;
             label3.Text = "Admin";
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(645, 354);
-            label12.Name = "label12";
-            label12.Size = new Size(85, 19);
-            label12.TabIndex = 45;
-            label12.Text = "Add Photo";
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.Azure;
-            button9.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = Color.MediumBlue;
-            button9.Location = new Point(736, 342);
-            button9.Margin = new Padding(3, 4, 3, 4);
-            button9.Name = "button9";
-            button9.Size = new Size(80, 39);
-            button9.TabIndex = 66;
-            button9.Text = "Browse";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(681, 397);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(114, 131);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 67;
-            pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(205, 243, 245);
@@ -271,11 +233,28 @@
             panel2.Controls.Add(label20);
             panel2.Controls.Add(nameTB);
             panel2.Controls.Add(label21);
-            panel2.Location = new Point(232, 79);
+            panel2.Location = new Point(252, 86);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(391, 507);
             panel2.TabIndex = 69;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(19, 392);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 20);
+            label6.TabIndex = 38;
+            label6.Text = "Password";
+            // 
+            // passwordTB
+            // 
+            passwordTB.Location = new Point(130, 389);
+            passwordTB.Margin = new Padding(3, 4, 3, 4);
+            passwordTB.Name = "passwordTB";
+            passwordTB.Size = new Size(246, 27);
+            passwordTB.TabIndex = 37;
             // 
             // label5
             // 
@@ -503,23 +482,6 @@
             label21.TabIndex = 1;
             label21.Text = "Name";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(19, 392);
-            label6.Name = "label6";
-            label6.Size = new Size(70, 20);
-            label6.TabIndex = 38;
-            label6.Text = "Password";
-            // 
-            // passwordTB
-            // 
-            passwordTB.Location = new Point(130, 389);
-            passwordTB.Margin = new Padding(3, 4, 3, 4);
-            passwordTB.Name = "passwordTB";
-            passwordTB.Size = new Size(246, 27);
-            passwordTB.TabIndex = 37;
-            // 
             // Addacademicdetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -527,9 +489,6 @@
             BackColor = Color.FromArgb(205, 243, 245);
             ClientSize = new Size(822, 652);
             Controls.Add(panel2);
-            Controls.Add(pictureBox1);
-            Controls.Add(button9);
-            Controls.Add(label12);
             Controls.Add(panel3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -543,11 +502,9 @@
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -563,9 +520,6 @@
         private Label label2;
         private Label label4;
         private Label label3;
-        private Label label12;
-        private Button button9;
-        private PictureBox pictureBox1;
         private Panel panel2;
         private TextBox AddressTB;
         private Label label13;

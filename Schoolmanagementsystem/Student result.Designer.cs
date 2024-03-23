@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button6 = new Button();
             button1 = new Button();
             panel2 = new Panel();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
             button7 = new Button();
-            label2 = new Label();
             label1 = new Label();
-            label3 = new Label();
             examResultDGV = new DataGridView();
             button8 = new Button();
             SIDTB = new TextBox();
@@ -53,7 +50,6 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(25, 35, 138);
-            panel1.Controls.Add(button6);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
@@ -61,21 +57,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(215, 627);
             panel1.TabIndex = 2;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(192, 0, 0);
-            button6.BackgroundImageLayout = ImageLayout.None;
-            button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 499);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(215, 52);
-            button6.TabIndex = 6;
-            button6.Text = "LogOut";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
             // 
             // button1
             // 
@@ -88,7 +69,7 @@
             button1.Name = "button1";
             button1.Size = new Size(215, 52);
             button1.TabIndex = 1;
-            button1.Text = "Back";
+            button1.Text = "Go to Dashbord";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -129,9 +110,7 @@
             // 
             panel3.BackColor = Color.FromArgb(157, 177, 247);
             panel3.Controls.Add(button7);
-            panel3.Controls.Add(label2);
             panel3.Controls.Add(label1);
-            panel3.Controls.Add(label3);
             panel3.Location = new Point(215, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
@@ -150,36 +129,15 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(170, 17);
-            label2.Name = "label2";
-            label2.Size = new Size(19, 19);
-            label2.TabIndex = 4;
-            label2.Text = ">";
-            label2.Click += label2_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(213, 15);
+            label1.Location = new Point(22, 18);
             label1.Name = "label1";
             label1.Size = new Size(125, 22);
             label1.TabIndex = 3;
             label1.Text = "Exam Result";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(17, 16);
-            label3.Name = "label3";
-            label3.Size = new Size(147, 22);
-            label3.TabIndex = 0;
-            label3.Text = "Student Profile";
             // 
             // examResultDGV
             // 
@@ -248,14 +206,11 @@
         #endregion
 
         private Panel panel1;
-        private Button button6;
         private Button button1;
         private Panel panel2;
         private PictureBox pictureBox1;
         private Panel panel3;
-        private Label label3;
         private Label label4;
-        private Label label2;
         private Label label1;
         private Button button7;
         private DataGridView examResultDGV;

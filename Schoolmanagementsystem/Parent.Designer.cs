@@ -30,7 +30,6 @@
         {
             label4 = new Label();
             pictureBox1 = new PictureBox();
-            button6 = new Button();
             button1 = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
@@ -87,21 +86,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(192, 0, 0);
-            button6.BackgroundImageLayout = ImageLayout.None;
-            button6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 530);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(215, 52);
-            button6.TabIndex = 6;
-            button6.Text = "LogOut";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
-            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(20, 35, 138);
@@ -131,7 +115,6 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(25, 35, 138);
-            panel1.Controls.Add(button6);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
@@ -172,6 +155,7 @@
             button9.TabIndex = 7;
             button9.Text = "X";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // label3
             // 
@@ -406,7 +390,6 @@
 
         private Label label4;
         private PictureBox pictureBox1;
-        private Button button6;
         private Button button1;
         private Panel panel2;
         private Panel panel1;
