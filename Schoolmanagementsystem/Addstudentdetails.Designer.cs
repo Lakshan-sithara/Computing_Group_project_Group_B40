@@ -57,11 +57,10 @@
             label17 = new Label();
             DOBDTP = new DateTimePicker();
             addmission_date_DTP = new DateTimePicker();
-            button9 = new Button();
-            label6 = new Label();
-            pictureBox1 = new PictureBox();
             button10 = new Button();
             groupBox1 = new GroupBox();
+            label14 = new Label();
+            passwordTB = new TextBox();
             label12 = new Label();
             unameTB = new TextBox();
             button11 = new Button();
@@ -79,13 +78,10 @@
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            label14 = new Label();
-            passwordTB = new TextBox();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -404,41 +400,6 @@
             addmission_date_DTP.Size = new Size(286, 25);
             addmission_date_DTP.TabIndex = 51;
             // 
-            // button9
-            // 
-            button9.BackColor = Color.Azure;
-            button9.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = Color.MediumBlue;
-            button9.Location = new Point(489, 438);
-            button9.Margin = new Padding(3, 4, 3, 4);
-            button9.Name = "button9";
-            button9.Size = new Size(80, 39);
-            button9.TabIndex = 65;
-            button9.Text = "Browse";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(350, 448);
-            label6.Name = "label6";
-            label6.Size = new Size(125, 17);
-            label6.TabIndex = 66;
-            label6.Text = "Add student photo";
-            label6.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(403, 485);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(114, 125);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 67;
-            pictureBox1.TabStop = false;
-            // 
             // button10
             // 
             button10.BackColor = Color.Teal;
@@ -467,10 +428,7 @@
             groupBox1.Controls.Add(DOBDTP);
             groupBox1.Controls.Add(button10);
             groupBox1.Controls.Add(label17);
-            groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(label16);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(button9);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label8);
@@ -492,6 +450,25 @@
             groupBox1.TabIndex = 69;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(25, 527);
+            label14.Name = "label14";
+            label14.Size = new Size(74, 17);
+            label14.TabIndex = 82;
+            label14.Text = "Password";
+            // 
+            // passwordTB
+            // 
+            passwordTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordTB.Location = new Point(21, 548);
+            passwordTB.Margin = new Padding(3, 4, 3, 4);
+            passwordTB.Name = "passwordTB";
+            passwordTB.Size = new Size(286, 25);
+            passwordTB.TabIndex = 81;
             // 
             // label12
             // 
@@ -686,25 +663,6 @@
             radioButton1.UseVisualStyleBackColor = true;
             radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(25, 527);
-            label14.Name = "label14";
-            label14.Size = new Size(74, 17);
-            label14.TabIndex = 82;
-            label14.Text = "Password";
-            // 
-            // passwordTB
-            // 
-            passwordTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordTB.Location = new Point(21, 548);
-            passwordTB.Margin = new Padding(3, 4, 3, 4);
-            passwordTB.Name = "passwordTB";
-            passwordTB.Size = new Size(286, 25);
-            passwordTB.TabIndex = 81;
-            // 
             // Addstudentdetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -725,7 +683,6 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -765,9 +722,6 @@
         private DateTimePicker DOBDTP;
         private DateTimePicker addmission_date_DTP;
         private Button button8;
-        private Button button9;
-        private Label label6;
-        private PictureBox pictureBox1;
         private Button button10;
         private GroupBox groupBox1;
         private RadioButton radioButton7;

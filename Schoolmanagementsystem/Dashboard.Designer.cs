@@ -190,6 +190,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(631, 59);
             panel3.TabIndex = 1;
+            panel3.Paint += panel3_Paint;
             // 
             // button7
             // 
@@ -296,6 +297,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
             Text = "Dashboard";
+            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

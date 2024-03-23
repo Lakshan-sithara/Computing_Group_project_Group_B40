@@ -29,14 +29,14 @@ namespace Schoolmanagementsystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            signform signform = new signform();
+            signform_new signform = new signform();
             signform.Show();
             this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            signform adminSign = new signform();
+            signform_new adminSign = new signform();
             adminSign.Show();
             this.Hide();
         }
@@ -65,7 +65,7 @@ namespace Schoolmanagementsystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            signform signform = new signform();
+            signform_new signform = new signform();
             signform.Show();
             this.Hide();
         }
@@ -75,6 +75,16 @@ namespace Schoolmanagementsystem
             Parent parent = new Parent();
             parent.Show();
             this.Hide();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Schoolmanagementsystem
 {
-    partial class signform
+    partial class signform_new
     {
         /// <summary>
         /// Required designer variable.
@@ -86,7 +86,7 @@
             showPass.TabIndex = 14;
             showPass.Text = "Show Password";
             showPass.UseVisualStyleBackColor = true;
-            showPass.CheckedChanged += checkBox1_CheckedChanged;
+            showPass.CheckedChanged += showPass_CheckedChanged;
             // 
             // signInBtn
             // 
@@ -100,7 +100,7 @@
             signInBtn.TabIndex = 11;
             signInBtn.Text = "SIGN IN";
             signInBtn.UseVisualStyleBackColor = false;
-            signInBtn.Click += signInBtn_Click;
+            signInBtn.Click += signInBtn_Click_1;
             // 
             // label7
             // 
@@ -111,7 +111,6 @@
             label7.Size = new Size(78, 22);
             label7.TabIndex = 10;
             label7.Text = "Password";
-            label7.Click += label7_Click;
             // 
             // passwordBox
             // 
@@ -128,7 +127,6 @@
             userNameBox.Name = "userNameBox";
             userNameBox.Size = new Size(251, 27);
             userNameBox.TabIndex = 6;
-            userNameBox.TextChanged += userNameBox_TextChanged;
             // 
             // label3
             // 
@@ -208,7 +206,7 @@
             button7.TabIndex = 7;
             button7.Text = "X";
             button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            button7.Click += button7_Click_1;
             // 
             // label4
             // 

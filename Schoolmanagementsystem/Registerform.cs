@@ -47,7 +47,7 @@ namespace Schoolmanagementsystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            signform signIn = new signform();
+            signform_new signIn = new signform();
             signIn.Show();
             this.Hide();
         }

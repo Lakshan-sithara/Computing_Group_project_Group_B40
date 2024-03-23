@@ -11,24 +11,13 @@ using MySql.Data.MySqlClient;
 
 namespace Schoolmanagementsystem
 {
-    public partial class signform : Form
+    public partial class signform_new : Form
     {
-        public signform()
+        public signform_new()
         {
             InitializeComponent();
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void signInBtn_Click(object sender, EventArgs e)
+        private void signInBtn_Click_1(object sender, EventArgs e)
         {
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
@@ -99,7 +88,7 @@ namespace Schoolmanagementsystem
                 }
                 nonAcademicReader.Close();
 
-                
+
 
 
                 // If none of the above matches, show invalid login message
@@ -113,18 +102,16 @@ namespace Schoolmanagementsystem
             {
                 mySqlConnection.Close();
             }
-
         }
 
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void showPass_CheckedChanged(object sender, EventArgs e)
         {
             passwordBox.PasswordChar = showPass.Checked ? '\0' : '*';
         }
 
-        private void userNameBox_TextChanged(object sender, EventArgs e)
+        private void button7_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

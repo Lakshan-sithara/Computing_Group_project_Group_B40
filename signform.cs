@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace Schoolmanagementsystem
 {
-    public partial class signform : Form
+    public partial class signform_new : Form
     {
-        public signform()
+        public signform_new()
         {
             InitializeComponent();
         }
