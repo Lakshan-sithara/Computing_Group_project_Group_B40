@@ -77,7 +77,7 @@
             AdminBtn.BackgroundImageLayout = ImageLayout.None;
             AdminBtn.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             AdminBtn.ForeColor = Color.White;
-            AdminBtn.Location = new Point(0, 331);
+            AdminBtn.Location = new Point(0, 270);
             AdminBtn.Margin = new Padding(3, 4, 3, 4);
             AdminBtn.Name = "AdminBtn";
             AdminBtn.Size = new Size(215, 52);
@@ -92,7 +92,7 @@
             button5.BackgroundImageLayout = ImageLayout.None;
             button5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 276);
+            button5.Location = new Point(0, 165);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(215, 52);
@@ -107,7 +107,7 @@
             button4.BackgroundImageLayout = ImageLayout.None;
             button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 221);
+            button4.Location = new Point(0, 322);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(215, 52);
@@ -122,7 +122,7 @@
             button3.BackgroundImageLayout = ImageLayout.None;
             button3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 167);
+            button3.Location = new Point(0, 218);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(215, 52);

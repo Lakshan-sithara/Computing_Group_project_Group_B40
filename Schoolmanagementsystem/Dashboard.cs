@@ -58,8 +58,8 @@ namespace Schoolmanagementsystem
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            signform signform = new signform();
-            signform.Show();
+            Student_profile studentProfile = new Student_profile();
+            studentProfile.Show();
             this.Hide();
         }
 
@@ -72,8 +72,8 @@ namespace Schoolmanagementsystem
 
         private void button5_Click(object sender, EventArgs e)
         {
-            signform signform = new signform();
-            signform.Show();
+            Parent parent = new Parent();
+            parent.Show();
             this.Hide();
         }
     }

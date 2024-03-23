@@ -62,6 +62,8 @@
             pictureBox1 = new PictureBox();
             button10 = new Button();
             groupBox1 = new GroupBox();
+            label12 = new Label();
+            unameTB = new TextBox();
             button11 = new Button();
             groupBox3 = new GroupBox();
             radioButton11 = new RadioButton();
@@ -77,8 +79,8 @@
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            unameTB = new TextBox();
-            label12 = new Label();
+            label14 = new Label();
+            passwordTB = new TextBox();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -236,7 +238,7 @@
             // fatherTB
             // 
             fatherTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            fatherTB.Location = new Point(20, 448);
+            fatherTB.Location = new Point(20, 373);
             fatherTB.Margin = new Padding(3, 4, 3, 4);
             fatherTB.Name = "fatherTB";
             fatherTB.Size = new Size(286, 25);
@@ -245,7 +247,7 @@
             // addressTB
             // 
             addressTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            addressTB.Location = new Point(20, 380);
+            addressTB.Location = new Point(20, 316);
             addressTB.Margin = new Padding(3, 4, 3, 4);
             addressTB.Name = "addressTB";
             addressTB.Size = new Size(286, 25);
@@ -254,7 +256,7 @@
             // religionTB
             // 
             religionTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            religionTB.Location = new Point(20, 313);
+            religionTB.Location = new Point(20, 256);
             religionTB.Margin = new Padding(3, 4, 3, 4);
             religionTB.Name = "religionTB";
             religionTB.Size = new Size(286, 25);
@@ -263,7 +265,7 @@
             // motherTB
             // 
             motherTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            motherTB.Location = new Point(20, 522);
+            motherTB.Location = new Point(20, 438);
             motherTB.Margin = new Padding(3, 4, 3, 4);
             motherTB.Name = "motherTB";
             motherTB.Size = new Size(286, 25);
@@ -273,7 +275,7 @@
             // AdmiNuTB
             // 
             AdmiNuTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            AdmiNuTB.Location = new Point(20, 112);
+            AdmiNuTB.Location = new Point(20, 95);
             AdmiNuTB.Margin = new Padding(3, 4, 3, 4);
             AdmiNuTB.Name = "AdmiNuTB";
             AdmiNuTB.Size = new Size(286, 25);
@@ -292,7 +294,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(20, 492);
+            label13.Location = new Point(20, 408);
             label13.Name = "label13";
             label13.Size = new Size(104, 17);
             label13.TabIndex = 36;
@@ -303,7 +305,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(20, 424);
+            label11.Location = new Point(20, 349);
             label11.Name = "label11";
             label11.Size = new Size(102, 17);
             label11.TabIndex = 34;
@@ -313,7 +315,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(20, 221);
+            label10.Location = new Point(20, 175);
             label10.Name = "label10";
             label10.Size = new Size(108, 17);
             label10.TabIndex = 33;
@@ -323,7 +325,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(20, 356);
+            label9.Location = new Point(20, 292);
             label9.Name = "label9";
             label9.RightToLeft = RightToLeft.Yes;
             label9.Size = new Size(104, 17);
@@ -334,7 +336,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(20, 289);
+            label8.Location = new Point(20, 232);
             label8.Name = "label8";
             label8.Size = new Size(60, 17);
             label8.TabIndex = 31;
@@ -357,7 +359,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(20, 153);
+            label5.Location = new Point(20, 124);
             label5.Name = "label5";
             label5.Size = new Size(87, 17);
             label5.TabIndex = 29;
@@ -367,7 +369,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(20, 89);
+            label16.Location = new Point(20, 74);
             label16.Name = "label16";
             label16.Size = new Size(130, 17);
             label16.TabIndex = 26;
@@ -387,7 +389,7 @@
             // DOBDTP
             // 
             DOBDTP.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            DOBDTP.Location = new Point(20, 177);
+            DOBDTP.Location = new Point(20, 145);
             DOBDTP.Margin = new Padding(3, 4, 3, 4);
             DOBDTP.Name = "DOBDTP";
             DOBDTP.Size = new Size(286, 25);
@@ -396,7 +398,7 @@
             // addmission_date_DTP
             // 
             addmission_date_DTP.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            addmission_date_DTP.Location = new Point(20, 245);
+            addmission_date_DTP.Location = new Point(20, 196);
             addmission_date_DTP.Margin = new Padding(3, 4, 3, 4);
             addmission_date_DTP.Name = "addmission_date_DTP";
             addmission_date_DTP.Size = new Size(286, 25);
@@ -453,6 +455,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label14);
+            groupBox1.Controls.Add(passwordTB);
             groupBox1.Controls.Add(label12);
             groupBox1.Controls.Add(unameTB);
             groupBox1.Controls.Add(button11);
@@ -488,6 +492,25 @@
             groupBox1.TabIndex = 69;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(21, 473);
+            label12.Name = "label12";
+            label12.Size = new Size(78, 17);
+            label12.TabIndex = 80;
+            label12.Text = "UserName";
+            // 
+            // unameTB
+            // 
+            unameTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            unameTB.Location = new Point(17, 494);
+            unameTB.Margin = new Padding(3, 4, 3, 4);
+            unameTB.Name = "unameTB";
+            unameTB.Size = new Size(286, 25);
+            unameTB.TabIndex = 79;
             // 
             // button11
             // 
@@ -663,24 +686,24 @@
             radioButton1.UseVisualStyleBackColor = true;
             radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
-            // unameTB
+            // label14
             // 
-            unameTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            unameTB.Location = new Point(20, 585);
-            unameTB.Margin = new Padding(3, 4, 3, 4);
-            unameTB.Name = "unameTB";
-            unameTB.Size = new Size(286, 25);
-            unameTB.TabIndex = 79;
+            label14.AutoSize = true;
+            label14.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(25, 527);
+            label14.Name = "label14";
+            label14.Size = new Size(74, 17);
+            label14.TabIndex = 82;
+            label14.Text = "Password";
             // 
-            // label12
+            // passwordTB
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(24, 564);
-            label12.Name = "label12";
-            label12.Size = new Size(78, 17);
-            label12.TabIndex = 80;
-            label12.Text = "UserName";
+            passwordTB.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordTB.Location = new Point(21, 548);
+            passwordTB.Margin = new Padding(3, 4, 3, 4);
+            passwordTB.Name = "passwordTB";
+            passwordTB.Size = new Size(286, 25);
+            passwordTB.TabIndex = 81;
             // 
             // Addstudentdetails
             // 
@@ -764,5 +787,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Label label12;
         private TextBox unameTB;
+        private Label label14;
+        private TextBox passwordTB;
     }
 }

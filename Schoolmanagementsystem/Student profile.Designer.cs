@@ -46,7 +46,7 @@
             classTB = new TextBox();
             gradeTB = new TextBox();
             nameTB = new TextBox();
-            SnameTB = new TextBox();
+            SIDTB = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -188,7 +188,7 @@
             panel4.Controls.Add(classTB);
             panel4.Controls.Add(gradeTB);
             panel4.Controls.Add(nameTB);
-            panel4.Controls.Add(SnameTB);
+            panel4.Controls.Add(SIDTB);
             panel4.Controls.Add(label10);
             panel4.Controls.Add(label9);
             panel4.Controls.Add(label8);
@@ -277,14 +277,14 @@
             nameTB.TabIndex = 13;
             nameTB.TextChanged += textBox2_TextChanged;
             // 
-            // SnameTB
+            // SIDTB
             // 
-            SnameTB.Location = new Point(166, 20);
-            SnameTB.Margin = new Padding(3, 4, 3, 4);
-            SnameTB.Name = "SnameTB";
-            SnameTB.Size = new Size(246, 27);
-            SnameTB.TabIndex = 12;
-            SnameTB.TextChanged += textBox1_TextChanged;
+            SIDTB.Location = new Point(166, 20);
+            SIDTB.Margin = new Padding(3, 4, 3, 4);
+            SIDTB.Name = "SIDTB";
+            SIDTB.Size = new Size(246, 27);
+            SIDTB.TabIndex = 12;
+            SIDTB.TextChanged += textBox1_TextChanged;
             // 
             // label10
             // 
@@ -364,9 +364,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(24, 23);
             label2.Name = "label2";
-            label2.Size = new Size(133, 20);
+            label2.Size = new Size(103, 20);
             label2.TabIndex = 1;
-            label2.Text = "Admission number";
+            label2.Text = "Enter your SID";
             label2.Click += label2_Click;
             // 
             // label1
@@ -477,7 +477,7 @@
         private TextBox classTB;
         private TextBox gradeTB;
         private TextBox nameTB;
-        private TextBox SnameTB;
+        private TextBox SIDTB;
         private Label label14;
         private Button button9;
     }

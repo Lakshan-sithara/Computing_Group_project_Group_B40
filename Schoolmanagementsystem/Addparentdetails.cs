@@ -70,8 +70,8 @@ namespace Schoolmanagementsystem
                 }
 
                 // Insert parent details into the parant table
-                string insertQuery = "INSERT INTO parant (Name, NIC, DOB, Gender, Religion, Mobile_no, Address, Occupation, SID, Relationship, PID,Username) " +
-                                     "VALUES (@Name, @NIC, @DOB, @Gender, @Religion, @MobileNo, @Address, @Occupation, @SID, @Relationship, @PID,@username)";
+                string insertQuery = "INSERT INTO parant (Name, NIC, DOB, Gender, Religion, Mobile_no, Address, Occupation, SID, Relationship, PID,Username,password) " +
+                                     "VALUES (@Name, @NIC, @DOB, @Gender, @Religion, @MobileNo, @Address, @Occupation, @SID, @Relationship, @PID,@username,@password)";
                 MySqlCommand cmd = new MySqlCommand(insertQuery, conn);
                 cmd.Parameters.AddWithValue("@Name", nameTB.Text);
                 cmd.Parameters.AddWithValue("@NIC", NICTB.Text);
@@ -85,6 +85,7 @@ namespace Schoolmanagementsystem
                 cmd.Parameters.AddWithValue("@Relationship", relationTB.Text);
                 cmd.Parameters.AddWithValue("@PID", PIDTB.Text);
                 cmd.Parameters.AddWithValue("@username", unameTB.Text);
+                cmd.Parameters.AddWithValue("@password", passwordTB.Text);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
@@ -129,7 +130,7 @@ namespace Schoolmanagementsystem
 
                 // Assuming AID is a unique identifier in your academic table
                 string updateQuery = "UPDATE parant SET Name = @Name, NIC = @NIC, DOB = @DOB, Gender = @Gender, Religion = @Religion, " +
-                                     "Mobile_no = @MobileNo, Address = @Address, Occupation= @Occupation, SID = @SID, relationship = @relationship,Username=@username WHERE PID = @PID";
+                                     "Mobile_no = @MobileNo, Address = @Address, Occupation= @Occupation, SID = @SID, relationship = @relationship,Username=@username,password=@password WHERE PID = @PID";
 
                 MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
                 cmd.Parameters.AddWithValue("@Name", nameTB.Text);
@@ -144,6 +145,7 @@ namespace Schoolmanagementsystem
                 cmd.Parameters.AddWithValue("@relationship", relationTB.Text);
                 cmd.Parameters.AddWithValue("@PID", PIDTB.Text);
                 cmd.Parameters.AddWithValue("@username", unameTB.Text);
+                cmd.Parameters.AddWithValue("@password", passwordTB.Text);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)

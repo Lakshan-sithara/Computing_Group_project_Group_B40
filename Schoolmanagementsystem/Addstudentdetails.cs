@@ -174,8 +174,8 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO `student` (Name, Admission_number, DOB, Religion, Address, Father_name, Mother_name, Gender, Grade, Class, Admission_date,Username) " +
-                                     "VALUES (@Name, @AdmissionNumber, @DOB, @Religion, @Address, @FatherName, @MotherName, @Gender, @Grade, @Class, @AdmissionDate,@username)";
+                string insertQuery = "INSERT INTO `student` (Name, Admission_number, DOB, Religion, Address, Father_name, Mother_name, Gender, Grade, Class, Admission_date,Username,password) " +
+                                     "VALUES (@Name, @AdmissionNumber, @DOB, @Religion, @Address, @FatherName, @MotherName, @Gender, @Grade, @Class, @AdmissionDate,@username,@password)";
                 using (MySqlCommand command = new MySqlCommand(insertQuery, conn))
                 {
                     // Add parameters
@@ -191,6 +191,7 @@ namespace Schoolmanagementsystem
                     command.Parameters.AddWithValue("@Class", Class);
                     command.Parameters.AddWithValue("@AdmissionDate", addmission_date_DTP.Value);
                     command.Parameters.AddWithValue("@username", unameTB.Text);
+                    command.Parameters.AddWithValue("@password", passwordTB.Text);
 
                     int rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
@@ -305,7 +306,7 @@ namespace Schoolmanagementsystem
 
                 string updateQuery = "UPDATE student SET Name = @Name, DOB = @DOB, Religion = @Religion, Address = @Address, " +
                                      "Father_name = @FatherName, Mother_name = @MotherName, Gender = @Gender, " +
-                                     "Grade = @Grade, Class = @Class,Username=@username WHERE Admission_number = @AdmissionNumber";
+                                     "Grade = @Grade, Class = @Class,Username=@username,password=@password WHERE Admission_number = @AdmissionNumber";
 
                 MySqlCommand command = new MySqlCommand(updateQuery, conn);
                 command.Parameters.AddWithValue("@Name", nameTB.Text);
@@ -319,6 +320,7 @@ namespace Schoolmanagementsystem
                 command.Parameters.AddWithValue("@Class", Class);
                 command.Parameters.AddWithValue("@AdmissionNumber", AdmiNuTB.Text);
                 command.Parameters.AddWithValue("@username", unameTB.Text);
+                command.Parameters.AddWithValue("@password", passwordTB.Text);
 
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)

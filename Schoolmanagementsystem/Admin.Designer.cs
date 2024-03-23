@@ -45,6 +45,7 @@
             label1 = new Label();
             pictureBox2 = new PictureBox();
             panel5 = new Panel();
+            button1 = new Button();
             label2 = new Label();
             pictureBox3 = new PictureBox();
             panel6 = new Panel();
@@ -56,7 +57,6 @@
             label5 = new Label();
             button10 = new Button();
             button13 = new Button();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -115,13 +115,14 @@
             button5.BackgroundImageLayout = ImageLayout.None;
             button5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 261);
+            button5.Location = new Point(3, 141);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(215, 52);
             button5.TabIndex = 5;
-            button5.Text = "Parennt";
+            button5.Text = "Parent";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -129,7 +130,7 @@
             button4.BackgroundImageLayout = ImageLayout.None;
             button4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 201);
+            button4.Location = new Point(3, 266);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(215, 52);
@@ -143,13 +144,14 @@
             button3.BackgroundImageLayout = ImageLayout.None;
             button3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 141);
+            button3.Location = new Point(3, 201);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(215, 52);
             button3.TabIndex = 3;
             button3.Text = "Academic Staff";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -284,6 +286,20 @@
             panel5.Size = new Size(191, 247);
             panel5.TabIndex = 9;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(66, 143, 168);
+            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(40, 191);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(106, 41);
+            button1.TabIndex = 6;
+            button1.Text = "Add deails";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -412,20 +428,6 @@
             button13.Text = "Add Year Schedule\r\n";
             button13.UseVisualStyleBackColor = false;
             button13.Click += button13_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(66, 143, 168);
-            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(40, 191);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(106, 41);
-            button1.TabIndex = 6;
-            button1.Text = "Add deails";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
             // 
             // Admin
             // 

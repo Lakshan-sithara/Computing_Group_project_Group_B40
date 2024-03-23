@@ -57,7 +57,7 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO academic (Name,NIC,DOB,Gender,Religion,AID,Admission_date,Mobile_no,Address,Username) VALUES('" + nameTB.Text + "','" + NICTB.Text + "','" + DOBDTB + "','" + gender + "','" + ReTB + "','" + AIDTB.Text + "','" + ADDTP.Value + "','" + MobileTB.Text + "','" + AddressTB.Text + "','"+usernameTB.Text+"') ";
+                string insertQuery = "INSERT INTO academic (Name,NIC,DOB,Gender,Religion,AID,Admission_date,Mobile_no,Address,Username,Password) VALUES('" + nameTB.Text + "','" + NICTB.Text + "','" + DOBDTB + "','" + gender + "','" + ReTB + "','" + AIDTB.Text + "','" + ADDTP.Value + "','" + MobileTB.Text + "','" + AddressTB.Text + "','"+usernameTB.Text+"','"+passwordTB.Text+"') ";
                 MySqlCommand cmd = new MySqlCommand(insertQuery, conn);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
@@ -91,7 +91,7 @@ namespace Schoolmanagementsystem
 
                 // Assuming AID is a unique identifier in your academic table
                 string updateQuery = "UPDATE academic SET Name = @Name, NIC = @NIC, DOB = @DOB, Gender = @Gender, Religion = @Religion, " +
-                                     "Admission_date = @AdmissionDate, Mobile_no = @MobileNo, Address = @Address,Username=@username WHERE AID = @AID";
+                                     "Admission_date = @AdmissionDate, Mobile_no = @MobileNo, Address = @Address,Username=@username,Password=@password WHERE AID = @AID";
 
                 MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
                 cmd.Parameters.AddWithValue("@Name", nameTB.Text);
@@ -104,6 +104,7 @@ namespace Schoolmanagementsystem
                 cmd.Parameters.AddWithValue("@Address", AddressTB.Text);
                 cmd.Parameters.AddWithValue("@AID", AIDTB.Text);
                 cmd.Parameters.AddWithValue("@username", usernameTB.Text);
+                cmd.Parameters.AddWithValue("@password", passwordTB.Text);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)

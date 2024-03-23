@@ -40,6 +40,8 @@
             label4 = new Label();
             label3 = new Label();
             panel2 = new Panel();
+            label5 = new Label();
+            usernameTB = new TextBox();
             AddressTB = new TextBox();
             label13 = new Label();
             label14 = new Label();
@@ -65,8 +67,8 @@
             pictureBox1 = new PictureBox();
             button9 = new Button();
             label12 = new Label();
-            usernameTB = new TextBox();
-            label5 = new Label();
+            passwordTB = new TextBox();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
@@ -208,6 +210,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(205, 243, 245);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(passwordTB);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(usernameTB);
             panel2.Controls.Add(AddressTB);
@@ -238,9 +242,26 @@
             panel2.Size = new Size(391, 507);
             panel2.TabIndex = 73;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(19, 329);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 20);
+            label5.TabIndex = 36;
+            label5.Text = "Username";
+            // 
+            // usernameTB
+            // 
+            usernameTB.Location = new Point(130, 326);
+            usernameTB.Margin = new Padding(3, 4, 3, 4);
+            usernameTB.Name = "usernameTB";
+            usernameTB.Size = new Size(246, 27);
+            usernameTB.TabIndex = 35;
+            // 
             // AddressTB
             // 
-            AddressTB.Location = new Point(130, 310);
+            AddressTB.Location = new Point(130, 291);
             AddressTB.Margin = new Padding(3, 4, 3, 4);
             AddressTB.Name = "AddressTB";
             AddressTB.Size = new Size(246, 27);
@@ -249,7 +270,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(19, 310);
+            label13.Location = new Point(19, 294);
             label13.Name = "label13";
             label13.Size = new Size(62, 20);
             label13.TabIndex = 33;
@@ -258,7 +279,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(19, 268);
+            label14.Location = new Point(19, 259);
             label14.Name = "label14";
             label14.Size = new Size(80, 20);
             label14.TabIndex = 32;
@@ -346,7 +367,7 @@
             // 
             // MobileTB
             // 
-            MobileTB.Location = new Point(130, 265);
+            MobileTB.Location = new Point(130, 256);
             MobileTB.Margin = new Padding(3, 4, 3, 4);
             MobileTB.Name = "MobileTB";
             MobileTB.Size = new Size(246, 27);
@@ -482,22 +503,22 @@
             label12.TabIndex = 70;
             label12.Text = "Add Photo";
             // 
-            // usernameTB
+            // passwordTB
             // 
-            usernameTB.Location = new Point(130, 357);
-            usernameTB.Margin = new Padding(3, 4, 3, 4);
-            usernameTB.Name = "usernameTB";
-            usernameTB.Size = new Size(246, 27);
-            usernameTB.TabIndex = 35;
+            passwordTB.Location = new Point(130, 361);
+            passwordTB.Margin = new Padding(3, 4, 3, 4);
+            passwordTB.Name = "passwordTB";
+            passwordTB.Size = new Size(246, 27);
+            passwordTB.TabIndex = 37;
             // 
-            // label5
+            // label6
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(19, 360);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 20);
-            label5.TabIndex = 36;
-            label5.Text = "Username";
+            label6.AutoSize = true;
+            label6.Location = new Point(19, 364);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 20);
+            label6.TabIndex = 38;
+            label6.Text = "Password";
             // 
             // Addnonacademicdetails
             // 
@@ -569,5 +590,7 @@
         private Label label12;
         private Label label5;
         private TextBox usernameTB;
+        private Label label6;
+        private TextBox passwordTB;
     }
 }
