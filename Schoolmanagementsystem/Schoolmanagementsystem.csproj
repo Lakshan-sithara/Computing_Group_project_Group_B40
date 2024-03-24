@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="C:\Users\laksh\Desktop\School Managment System\Computing_Group_project_Group_B40\signform.cs" Link="signform.cs" />
+    <EmbeddedResource Remove="signform.resx" />
   </ItemGroup>
 
   <ItemGroup>
