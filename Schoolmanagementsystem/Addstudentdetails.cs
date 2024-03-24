@@ -172,6 +172,7 @@ namespace Schoolmanagementsystem
                 using (MySqlCommand command = new MySqlCommand(insertQuery, conn))
                 {
                     // Add parameters
+                   
                     command.Parameters.AddWithValue("@Name", nameTB.Text);
                     command.Parameters.AddWithValue("@AdmissionNumber", AdmiNuTB.Text);
                     command.Parameters.AddWithValue("@DOB", DOBDTP.Value);
@@ -299,7 +300,8 @@ namespace Schoolmanagementsystem
 
                 string updateQuery = "UPDATE student SET Name = @Name, DOB = @DOB, Religion = @Religion, Address = @Address, " +
                                      "Father_name = @FatherName, Mother_name = @MotherName, Gender = @Gender, " +
-                                     "Grade = @Grade, Class = @Class,Username=@username,password=@password WHERE Admission_number = @AdmissionNumber";
+                                     "Grade = @Grade, Class = @Class, Username = @Username, Password = @Password " +
+                                     "WHERE Admission_number = @AdmissionNumber";
 
                 MySqlCommand command = new MySqlCommand(updateQuery, conn);
                 command.Parameters.AddWithValue("@Name", nameTB.Text);
@@ -311,9 +313,9 @@ namespace Schoolmanagementsystem
                 command.Parameters.AddWithValue("@Gender", Gender);
                 command.Parameters.AddWithValue("@Grade", grade);
                 command.Parameters.AddWithValue("@Class", Class);
+                command.Parameters.AddWithValue("@Username", unameTB.Text);
+                command.Parameters.AddWithValue("@Password", passwordTB.Text);
                 command.Parameters.AddWithValue("@AdmissionNumber", AdmiNuTB.Text);
-                command.Parameters.AddWithValue("@username", unameTB.Text);
-                command.Parameters.AddWithValue("@password", passwordTB.Text);
 
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
@@ -333,6 +335,7 @@ namespace Schoolmanagementsystem
             {
                 conn.Close();
             }
+
         }
 
         private void button11_Click(object sender, EventArgs e)
