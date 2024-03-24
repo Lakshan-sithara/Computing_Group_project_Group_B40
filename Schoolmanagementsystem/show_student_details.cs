@@ -90,7 +90,7 @@ namespace Schoolmanagementsystem
                     dt.Load(reader);
 
                     // Bind DataTable to DataGridView
-                    classDGV.DataSource = dt;
+                    ClassDGV.DataSource = dt;
                 }
                 else
                 {

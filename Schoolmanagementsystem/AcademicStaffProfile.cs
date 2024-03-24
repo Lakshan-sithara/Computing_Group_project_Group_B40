@@ -160,7 +160,7 @@ namespace Schoolmanagementsystem
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-            using(MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
+            using (MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
             {
                 mySqlConnection.Open();
                 string quary = "SELECT * FROM academic WHERE AID=@AID";
@@ -178,6 +178,13 @@ namespace Schoolmanagementsystem
                     MessageBox.Show("No data found");
                 }
             }
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            attendance att = new attendance();
+            att.Show();
+            this.Hide();
         }
     }
 }

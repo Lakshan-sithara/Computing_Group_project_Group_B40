@@ -86,5 +86,12 @@ namespace Schoolmanagementsystem
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Year_schedule yearSchedule = new Year_schedule();
+            yearSchedule.Show();
+            this.Hide();
+        }
     }
 }

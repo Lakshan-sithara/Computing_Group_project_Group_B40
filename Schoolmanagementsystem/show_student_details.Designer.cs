@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            classDGV = new DataGridView();
+            ClassDGV = new DataGridView();
             groupBox3 = new GroupBox();
             radioButton11 = new RadioButton();
             radioButton10 = new RadioButton();
@@ -44,20 +44,20 @@
             label1 = new Label();
             label2 = new Label();
             button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)classDGV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ClassDGV).BeginInit();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
-            // classDGV
+            // ClassDGV
             // 
-            classDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            classDGV.Location = new Point(53, 45);
-            classDGV.Name = "classDGV";
-            classDGV.RowHeadersWidth = 51;
-            classDGV.RowTemplate.Height = 29;
-            classDGV.Size = new Size(581, 490);
-            classDGV.TabIndex = 102;
+            ClassDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ClassDGV.Location = new Point(53, 45);
+            ClassDGV.Name = "ClassDGV";
+            ClassDGV.RowHeadersWidth = 51;
+            ClassDGV.RowTemplate.Height = 29;
+            ClassDGV.Size = new Size(581, 490);
+            ClassDGV.TabIndex = 102;
             // 
             // groupBox3
             // 
@@ -234,6 +234,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(205, 243, 245);
             ClientSize = new Size(824, 577);
             Controls.Add(button2);
             Controls.Add(label2);
@@ -241,10 +242,10 @@
             Controls.Add(button1);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
-            Controls.Add(classDGV);
+            Controls.Add(ClassDGV);
             Name = "show_student_details";
             Text = "show_student_details";
-            ((System.ComponentModel.ISupportInitialize)classDGV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ClassDGV).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -255,7 +256,7 @@
 
         #endregion
 
-        private DataGridView classDGV;
+        private DataGridView ClassDGV;
         private GroupBox groupBox3;
         private RadioButton radioButton11;
         private RadioButton radioButton10;

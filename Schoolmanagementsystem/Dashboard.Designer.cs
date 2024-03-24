@@ -47,6 +47,7 @@
             label1 = new Label();
             pictureBox3 = new PictureBox();
             label5 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,6 +60,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(25, 35, 138);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(AdminBtn);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
@@ -236,14 +238,14 @@
             panel4.Location = new Point(246, 84);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(567, 507);
+            panel4.Size = new Size(584, 507);
             panel4.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(37, 312);
+            label2.Location = new Point(3, 311);
             label2.Name = "label2";
             label2.Size = new Size(561, 154);
             label2.TabIndex = 7;
@@ -283,6 +285,21 @@
             label5.TabIndex = 4;
             label5.Text = "THE TEURLINGS COLLAGE";
             label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(20, 35, 138);
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 536);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(215, 52);
+            button1.TabIndex = 7;
+            button1.Text = "Year Schedule";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // Dashboard
             // 
@@ -331,5 +348,6 @@
         private Label label3;
         private Label label4;
         private Button button7;
+        private Button button1;
     }
 }

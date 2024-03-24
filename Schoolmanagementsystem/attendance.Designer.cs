@@ -38,6 +38,8 @@
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -114,7 +116,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(436, 179);
+            radioButton2.Location = new Point(410, 179);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(76, 24);
             radioButton2.TabIndex = 8;
@@ -125,7 +127,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(646, 179);
+            button1.Location = new Point(646, 135);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 9;
@@ -133,11 +135,34 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(646, 179);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 10;
+            button2.Text = "Show";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(646, 223);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 11;
+            button3.Text = "Back";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // attendance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(205, 243, 245);
             ClientSize = new Size(824, 577);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
@@ -167,5 +192,7 @@
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

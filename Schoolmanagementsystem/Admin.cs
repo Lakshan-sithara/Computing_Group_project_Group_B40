@@ -118,5 +118,12 @@ namespace Schoolmanagementsystem
             showNonAcademicDetails.Show();
             this.Hide();
         }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            attendance attendance = new attendance();
+            attendance.Show();
+            this.Hide();
+        }
     }
 }

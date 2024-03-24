@@ -44,6 +44,7 @@
             button2 = new Button();
             label9 = new Label();
             AIDTB = new TextBox();
+            button3 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -242,12 +243,27 @@
             AIDTB.TabIndex = 24;
             AIDTB.TextChanged += textBox6_TextChanged;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.MidnightBlue;
+            button3.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(232, 343);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(171, 65);
+            button3.TabIndex = 15;
+            button3.Text = "Add Student's  Attendance";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_2;
+            // 
             // AcademicStaffProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(14, 145, 240);
             ClientSize = new Size(842, 624);
+            Controls.Add(button3);
             Controls.Add(panel4);
             Controls.Add(button8);
             Controls.Add(pictureBox2);
@@ -288,5 +304,6 @@
         private Button button9;
         private DataGridView teacherDGV;
         private Button button2;
+        private Button button3;
     }
 }

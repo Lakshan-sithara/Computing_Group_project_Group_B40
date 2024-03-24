@@ -46,7 +46,7 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string query = "INSERT INTO attendance (StudentID, Date, Attendance) VALUES ('" + SIDTB.Text + "', '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', '" + att + "')";
+                string query = "INSERT INTO attendance (SID, Date, Attendance) VALUES ('" + SIDTB.Text + "', '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', '" + att + "')";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -66,6 +66,20 @@ namespace Schoolmanagementsystem
             {
                 conn.Close();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            show_attendance show_Attendance = new show_attendance();
+            show_Attendance.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AcademicStaffProfile academicStaffProfile = new AcademicStaffProfile();
+            academicStaffProfile.Show();
+            this.Hide();
         }
     }
 }

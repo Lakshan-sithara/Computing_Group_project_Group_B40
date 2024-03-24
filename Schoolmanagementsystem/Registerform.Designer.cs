@@ -30,6 +30,8 @@
         {
             panel1 = new Panel();
             panel3 = new Panel();
+            passwordTB = new TextBox();
+            usernameTB = new TextBox();
             button1 = new Button();
             label7 = new Label();
             label6 = new Label();
@@ -40,8 +42,7 @@
             panel4 = new Panel();
             button7 = new Button();
             label8 = new Label();
-            usernameTB = new TextBox();
-            passwordTB = new TextBox();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -63,6 +64,7 @@
             // panel3
             // 
             panel3.BackColor = Color.PowderBlue;
+            panel3.Controls.Add(button2);
             panel3.Controls.Add(passwordTB);
             panel3.Controls.Add(usernameTB);
             panel3.Controls.Add(button1);
@@ -74,6 +76,20 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(327, 485);
             panel3.TabIndex = 2;
+            // 
+            // passwordTB
+            // 
+            passwordTB.Location = new Point(37, 229);
+            passwordTB.Name = "passwordTB";
+            passwordTB.Size = new Size(253, 27);
+            passwordTB.TabIndex = 13;
+            // 
+            // usernameTB
+            // 
+            usernameTB.Location = new Point(35, 151);
+            usernameTB.Name = "usernameTB";
+            usernameTB.Size = new Size(253, 27);
+            usernameTB.TabIndex = 12;
             // 
             // button1
             // 
@@ -190,19 +206,19 @@
             label8.TabIndex = 1;
             label8.Text = "School Management System";
             // 
-            // usernameTB
+            // button2
             // 
-            usernameTB.Location = new Point(35, 151);
-            usernameTB.Name = "usernameTB";
-            usernameTB.Size = new Size(253, 27);
-            usernameTB.TabIndex = 12;
-            // 
-            // passwordTB
-            // 
-            passwordTB.Location = new Point(37, 229);
-            passwordTB.Name = "passwordTB";
-            passwordTB.Size = new Size(253, 27);
-            passwordTB.TabIndex = 13;
+            button2.BackColor = Color.MidnightBlue;
+            button2.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(94, 342);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(123, 43);
+            button2.TabIndex = 14;
+            button2.Text = "BACK ";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // Registerform
             // 
@@ -244,5 +260,6 @@
         private Button button7;
         private TextBox passwordTB;
         private TextBox usernameTB;
+        private Button button2;
     }
 }

@@ -153,5 +153,12 @@ namespace Schoolmanagementsystem
         {
             this.Close();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }
