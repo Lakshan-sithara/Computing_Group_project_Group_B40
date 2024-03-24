@@ -13,6 +13,7 @@ namespace Schoolmanagementsystem
 {
     public partial class AcademicStaffProfile : Form
     {
+        string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
 
         public AcademicStaffProfile()
         {
@@ -46,26 +47,7 @@ namespace Schoolmanagementsystem
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
-            MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
-            mySqlConnection.Open();
-            if(AIDTB.Text != "")
-            {
-                MySqlCommand command = new MySqlCommand("SELECT Name,NIC,DOB,Religion,Admission_date,Mobile_no,Address FROM academic_staff WHERE AID = @academic_staff_id", mySqlConnection);
-                command.Parameters.AddWithValue("@academic_staff_id", AIDTB.Text);
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    nameTB.Text = reader.GetString("Name");
-                    NICTB.Text = reader.GetString("NIC");
-                    DOBDTB.Text = reader.GetString("DOB");
-                    ReTB.Text = reader.GetString("Religion");
-                    ADDTP.Text = reader.GetString("Admission_date");
-                    MobileTB.Text = reader.GetString("Mobile_no");
-                    AddressTB.Text = reader.GetString("Address");
-                }
-                mySqlConnection.Close();
-            }
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -168,7 +150,34 @@ namespace Schoolmanagementsystem
 
         private void nameTB_TextChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            using(MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
+            {
+                mySqlConnection.Open();
+                string quary = "SELECT * FROM academic WHERE AID=@AID";
+                MySqlCommand command = new MySqlCommand(quary, mySqlConnection);
+                command.Parameters.AddWithValue("@AID", AIDTB.Text);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    teacherDGV.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("No data found");
+                }
+            }
         }
     }
 }

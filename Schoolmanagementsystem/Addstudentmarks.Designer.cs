@@ -44,12 +44,10 @@
             subjectTB = new TextBox();
             MarksTB = new TextBox();
             button7 = new Button();
-            addMarksDGV = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)addMarksDGV).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -227,23 +225,12 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
-            // addMarksDGV
-            // 
-            addMarksDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            addMarksDGV.Location = new Point(273, 276);
-            addMarksDGV.Name = "addMarksDGV";
-            addMarksDGV.RowHeadersWidth = 51;
-            addMarksDGV.RowTemplate.Height = 29;
-            addMarksDGV.Size = new Size(502, 318);
-            addMarksDGV.TabIndex = 94;
-            // 
             // Addstudentmarks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(205, 243, 245);
             ClientSize = new Size(842, 624);
-            Controls.Add(addMarksDGV);
             Controls.Add(button7);
             Controls.Add(MarksTB);
             Controls.Add(subjectTB);
@@ -263,7 +250,6 @@
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)addMarksDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -286,6 +272,5 @@
         private TextBox subjectTB;
         private TextBox MarksTB;
         private Button button7;
-        private DataGridView addMarksDGV;
     }
 }

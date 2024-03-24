@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             button1 = new Button();
             label1 = new Label();
             button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            PDGV = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)PDGV).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(50, 107);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(623, 432);
-            dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
@@ -75,27 +65,36 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // PDGV
+            // 
+            PDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            PDGV.Location = new Point(55, 90);
+            PDGV.Name = "PDGV";
+            PDGV.RowHeadersWidth = 51;
+            PDGV.RowTemplate.Height = 29;
+            PDGV.Size = new Size(643, 447);
+            PDGV.TabIndex = 107;
+            // 
             // show_parant_details
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(824, 577);
+            Controls.Add(PDGV);
             Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
             Name = "show_parant_details";
             Text = "show_parant_details";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Button button1;
         private Label label1;
         private Button button2;
+        private DataGridView PDGV;
     }
 }

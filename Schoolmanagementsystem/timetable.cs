@@ -68,19 +68,29 @@ namespace Schoolmanagementsystem
         private void button2_Click(object sender, EventArgs e)
         {
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
-            MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
-            try
+            using (MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
             {
                 mySqlConnection.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM time_table WHERE Grade = '" + Grade + "' AND Class = '" + Class + "'", mySqlConnection);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables;
+                MySqlCommand mySqlCommand = new MySqlCommand("SELECT Time,Subject,Day FROM time_table WHERE Grade = @Grade AND Class = @Class", mySqlConnection);
+                mySqlCommand.Parameters.AddWithValue("@Grade", Grade);
+                mySqlCommand.Parameters.AddWithValue("@Class", Class);
+                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(mySqlCommand);
+                DataTable dataTable = new DataTable();
+                mySqlDataAdapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }

@@ -25,17 +25,20 @@ namespace Schoolmanagementsystem
             try
             {
                 mySqlConnection.Open();
-                string insertQuery = "INSERT INTO subject (Subject_Name,Marks) VALUES ('" + subjectTB + "','" + MarksTB + "') WHERE SID=@SID";
+                string insertQuery = "INSERT INTO `subject` (Subject_Name, Marks, SID) VALUES (@SubjectName, @Marks, @SID)";
                 MySqlCommand command = new MySqlCommand(insertQuery, mySqlConnection);
+                command.Parameters.AddWithValue("@SubjectName", subjectTB.Text);
+                command.Parameters.AddWithValue("@Marks", MarksTB.Text);
                 command.Parameters.AddWithValue("@SID", SIDBox.Text);
+
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Student details added successfully");
+                    MessageBox.Show("Subject details added successfully");
                 }
                 else
                 {
-                    MessageBox.Show("Student details not added");
+                    MessageBox.Show("Subject details not added");
                 }
             }
             catch (Exception ex)
@@ -46,10 +49,8 @@ namespace Schoolmanagementsystem
             {
                 mySqlConnection.Close();
             }
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM subject", mySqlConnection);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            addMarksDGV.DataSource = ds;
+
+
 
 
         }

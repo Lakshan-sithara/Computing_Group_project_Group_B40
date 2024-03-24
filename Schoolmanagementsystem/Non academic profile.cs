@@ -13,6 +13,7 @@ namespace Schoolmanagementsystem
 {
     public partial class Non_academic_profile : Form
     {
+        string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
         public Non_academic_profile()
         {
             InitializeComponent();
@@ -45,31 +46,7 @@ namespace Schoolmanagementsystem
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
-            MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
-            mySqlConnection.Open();
-            if (NAID.Text != "")
-            {
-                MySqlCommand command = new MySqlCommand("SELECT Name,NIC,DOB,Religion,Admission_date,Mobile_no,Address FROM non-academic_staff WHERE NAID = @non_academic_staff_id", mySqlConnection);
-                command.Parameters.AddWithValue("@non_academic_staff_id", NAID.Text);
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    nameTB.Text = reader.GetString("Name");
-                    NICTB.Text = reader.GetString("NIC");
-                    DOBTB.Text = reader.GetString("DOB");
-                    ReTB.Text = reader.GetString("Religion");
-                    AddressTB.Text = reader.GetString("Address");
-                    ADdateTB.Text = reader.GetString("Admission_date");
-                    mobileTB.Text = reader.GetString("Mobile_no");
 
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter the NAID");
-            }
-            mySqlConnection.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -102,6 +79,41 @@ namespace Schoolmanagementsystem
         {
             Addstudenttimetable addstudenttimetable = new Addstudenttimetable();
             addstudenttimetable.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
+            {
+                mySqlConnection.Open();
+                string query = "SELECT * FROM `non-academic_staff` WHERE NAID=@NAID";
+                MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
+                cmd.Parameters.AddWithValue("@NAID", NAIDTB.Text);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                nonDGV.DataSource = dt;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Addstudenttimetable addstudenttimetable = new Addstudenttimetable();
+            addstudenttimetable.Show();
+            this.Hide();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
             this.Hide();
         }
     }

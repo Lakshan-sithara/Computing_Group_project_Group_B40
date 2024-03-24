@@ -29,12 +29,17 @@ namespace Schoolmanagementsystem
             using (MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
             {
                 mySqlConnection.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM student WHERE SID='"+SIDTB+"'", mySqlConnection);
+                string query = "SELECT Subject_name,Marks FROM subject WHERE SID=@SID";
+                MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
+                cmd.Parameters.AddWithValue("@SID", SIDTB.Text);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 examResultDGV.DataSource = dt;
             }
+
         }
 
         private void button6_Click(object sender, EventArgs e)

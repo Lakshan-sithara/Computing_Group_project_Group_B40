@@ -55,7 +55,7 @@ namespace Schoolmanagementsystem
             {
                 conn.Open();
                 string insertQuery = "INSERT INTO `non-academic_staff` (Name, NIC, DOB, Gender, Religion, NAID, Admission_date, Mobile_no, Address,Username,Password) " +
-                                     $"VALUES ('{nameTB.Text}', '{NICTB.Text}', '{DOBDTB.Value}', '{gender}', '{ReTB.Text}', '{AIDTB.Text}', '{ADDTP.Value}', '{MobileTB}', '{AddressTB.Text}','{usernameTB.Text}','{passwordTB}') ";
+                                     $"VALUES ('{nameTB.Text}', '{NICTB.Text}', '{DOBDTB.Value}', '{gender}', '{ReTB.Text}', '{AIDTB.Text}', '{ADDTP.Value}', '{MobileTB}', '{AddressTB.Text}','{usernameTB.Text}','{passwordTB.Text}') ";
                 MySqlCommand cmd = new MySqlCommand(insertQuery, conn);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)

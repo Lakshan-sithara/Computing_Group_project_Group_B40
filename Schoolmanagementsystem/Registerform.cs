@@ -70,12 +70,13 @@ namespace Schoolmanagementsystem
 
                 // Check login for admin
                 MySqlCommand adminCommand = new MySqlCommand("SELECT * FROM admin WHERE username = @username AND password = @password", mySqlConnection);
-                adminCommand.Parameters.AddWithValue("@username", usernameTB);
-                adminCommand.Parameters.AddWithValue("@password", passwordTB);
+                adminCommand.Parameters.AddWithValue("@username", username);
+                adminCommand.Parameters.AddWithValue("@password", pass);
                 MySqlDataReader adminReader = adminCommand.ExecuteReader();
 
                 if (adminReader.Read())
                 {
+                    adminReader.Close(); // Close the admin reader
                     MessageBox.Show("Login Successful as Admin");
                     // Open admin dashboard or window
                     Admin admin = new Admin();
@@ -83,17 +84,17 @@ namespace Schoolmanagementsystem
                     this.Hide();
                     return;
                 }
-
                 adminReader.Close(); // Close the admin reader
 
                 // Check login for academic
                 MySqlCommand academicCommand = new MySqlCommand("SELECT * FROM academic WHERE Username = @username AND Password = @password", mySqlConnection);
-                academicCommand.Parameters.AddWithValue("@username", usernameTB);
-                academicCommand.Parameters.AddWithValue("@password", passwordTB);
+                academicCommand.Parameters.AddWithValue("@username", username);
+                academicCommand.Parameters.AddWithValue("@password", pass);
                 MySqlDataReader academicReader = academicCommand.ExecuteReader();
 
                 if (academicReader.Read())
                 {
+                    academicReader.Close(); // Close the academic reader
                     MessageBox.Show("Login Successful as Academic");
                     // Open academic dashboard or window
                     AcademicStaffProfile academic = new AcademicStaffProfile();
@@ -101,17 +102,17 @@ namespace Schoolmanagementsystem
                     this.Hide();
                     return;
                 }
-
                 academicReader.Close(); // Close the academic reader
 
                 // Check login for non-academic (if applicable)
-                MySqlCommand nonAcademicCommand = new MySqlCommand("SELECT * FROM non-academic_staff WHERE Username = @username AND Password = @password", mySqlConnection);
-                nonAcademicCommand.Parameters.AddWithValue("@username", usernameTB);
-                nonAcademicCommand.Parameters.AddWithValue("@password", passwordTB);
+                MySqlCommand nonAcademicCommand = new MySqlCommand("SELECT * FROM `non-academic_staff` WHERE Username = @username AND Password = @password", mySqlConnection);
+                nonAcademicCommand.Parameters.AddWithValue("@username", username);
+                nonAcademicCommand.Parameters.AddWithValue("@password", pass);
                 MySqlDataReader nonAcademicReader = nonAcademicCommand.ExecuteReader();
-                // Check login for parent (if applicable)
+
                 if (nonAcademicReader.Read())
                 {
+                    nonAcademicReader.Close(); // Close the non-academic reader
                     MessageBox.Show("Login Successful as Non-Academic Staff");
                     // Open non-academic dashboard or window
                     Non_academic_profile nonAcademic = new Non_academic_profile();
@@ -119,22 +120,20 @@ namespace Schoolmanagementsystem
                     this.Hide();
                     return;
                 }
-                nonAcademicReader.Close();
-
-
-
+                nonAcademicReader.Close(); // Close the non-academic reader
 
                 // If none of the above matches, show invalid login message
                 MessageBox.Show("Invalid Username or Password");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid Username or Password");
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
                 mySqlConnection.Close();
             }
+
 
 
         }

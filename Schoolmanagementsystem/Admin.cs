@@ -81,7 +81,9 @@ namespace Schoolmanagementsystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            show_student_details showStudentDetails = new show_student_details();
+            showStudentDetails.Show();
+            this.Hide();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -98,12 +100,23 @@ namespace Schoolmanagementsystem
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            show_parant_details showParantDetails = new show_parant_details();
+            showParantDetails.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            show_academic_staff showAcademicStaff = new show_academic_staff();
+            showAcademicStaff.Show();
+            this.Hide();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            show_non_academic_details showNonAcademicDetails = new show_non_academic_details();
+            showNonAcademicDetails.Show();
+            this.Hide();
         }
     }
 }

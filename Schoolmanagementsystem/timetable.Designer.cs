@@ -87,6 +87,7 @@
             button1.TabIndex = 1;
             button1.Text = "Back to Dashboard";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -144,6 +145,7 @@
             button7.TabIndex = 7;
             button7.Text = "X";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // label2
             // 

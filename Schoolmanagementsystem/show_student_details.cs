@@ -69,6 +69,7 @@ namespace Schoolmanagementsystem
         {
             string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
             MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
+
             try
             {
                 mySqlConnection.Open();
@@ -76,15 +77,27 @@ namespace Schoolmanagementsystem
                 MySqlCommand command = new MySqlCommand(Query, mySqlConnection);
                 command.Parameters.AddWithValue("@Grade", Grade);
                 command.Parameters.AddWithValue("@Class", Class);
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
+
+                // Use ExecuteReader to get data from SELECT query
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    MessageBox.Show("Student details added successfully");
+                    MessageBox.Show("Student details retrieved successfully");
+
+                    // Load data into a DataTable to bind to DataGridView
+                    DataTable dt = new DataTable();
+                    dt.Load(reader);
+
+                    // Bind DataTable to DataGridView
+                    classDGV.DataSource = dt;
                 }
                 else
                 {
-                    MessageBox.Show("Student details not added");
+                    MessageBox.Show("No students found for the specified Grade and Class");
                 }
+
+                reader.Close(); // Close the reader after use
             }
             catch (Exception ex)
             {
@@ -94,10 +107,7 @@ namespace Schoolmanagementsystem
             {
                 mySqlConnection.Close();
             }
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM student", mySqlConnection);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            classDGV.DataSource = ds;
+
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -13,6 +13,7 @@ namespace Schoolmanagementsystem
 {
     public partial class Parent : Form
     {
+        string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
         public Parent()
         {
             InitializeComponent();
@@ -25,33 +26,9 @@ namespace Schoolmanagementsystem
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
-            MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
-            mySqlConnection.Open();
-            if (PIDTB.Text != "")
-            {
-                MySqlCommand cmd = new MySqlCommand("SELECT Name,NIC,DOB,Gender,Religion,Occupation,SID FROM parent WHERE ParentID = @ParentID OR SID=@SID", mySqlConnection);
-                cmd.Parameters.AddWithValue("@ParentID", PIDTB.Text);
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        nameTB.Text = reader.GetString("Name");
-                        NICTB.Text = reader.GetString("NIC");
-                        DOBTB.Text = reader.GetString("DOB");
-                        genderTB.Text = reader.GetString("Gender");
-                        religionTB.Text = reader.GetString("Religion");
-                        occupationTB.Text = reader.GetString("Occupation");
-                        SIDTB.Text = reader.GetString("SID");
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Parant ID No found");
-                    }
-                }
-            }
-            mySqlConnection.Close();
+
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -83,6 +60,23 @@ namespace Schoolmanagementsystem
         private void button9_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using(MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
+            {
+                mySqlConnection.Open();
+                string query = "SELECT * FROM parant WHERE PID=@Parent_ID";
+                MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
+                cmd.Parameters.AddWithValue("@Parent_ID", PIDTB.Text);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                parantDGV.DataSource = dt;
+            }
         }
     }
 }

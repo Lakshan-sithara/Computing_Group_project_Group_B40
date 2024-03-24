@@ -50,7 +50,7 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO academic (Name,NIC,DOB,Gender,Religion,AID,Admission_date,Mobile_no,Address,Username,Password) VALUES('" + nameTB.Text + "','" + NICTB.Text + "','" + DOBDTB + "','" + gender + "','" + ReTB + "','" + AIDTB.Text + "','" + ADDTP.Value + "','" + MobileTB.Text + "','" + AddressTB.Text + "','"+usernameTB.Text+"','"+passwordTB.Text+"') ";
+                string insertQuery = "INSERT INTO academic (Name,NIC,DOB,Gender,Religion,AID,Admission_date,Mobile_no,Address,Username,Password) VALUES('" + nameTB.Text + "','" + NICTB.Text + "','" + DOBDTB.Value + "','" + gender + "','" + ReTB.Text + "','" + AIDTB.Text + "','" + ADDTP.Value + "','" + MobileTB.Text + "','" + AddressTB.Text + "','"+usernameTB.Text+"','"+passwordTB.Text+"') ";
                 MySqlCommand cmd = new MySqlCommand(insertQuery, conn);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
