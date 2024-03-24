@@ -47,7 +47,7 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string query = "INSERT INTO student_marks (SID,Subject_Name,Term,Marks,Year) VALUES (@SID,@Subject,@Term,@Mark,@Year)";
+                string query = "INSERT INTO subject (SID,Subject_Name,Term,Marks,Year) VALUES (@SID,@Subject,@Term,@Mark,@Year)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@SID", SIDTB.Text);
                 cmd.Parameters.AddWithValue("@Subject", subjectTB.Text);
@@ -83,7 +83,7 @@ namespace Schoolmanagementsystem
             try
             {
                 conn.Open();
-                string query = "UPDATE student_marks SET Marks = @Mark,Subject_Name = @Subject,Term = @Term,Year = @Year WHERE SID = @SID ";
+                string query = "UPDATE subject SET Marks = @Mark,Subject_Name = @Subject,Term = @Term,Year = @Year WHERE SID = @SID ";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@SID", SIDTB.Text);
                 cmd.Parameters.AddWithValue("@Subject", subjectTB.Text);
@@ -116,7 +116,7 @@ namespace Schoolmanagementsystem
             using (MySqlConnection conn = new MySqlConnection("server=" + server + ";database=" + database + ";uid=" + uid + ";password=" + password))
             {
                 conn.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT student.Name FROM subject INNER JOIN subject.Subject_name,subject.Marks WHERE student.SID=subject.SID AND SID = '" + SIDTB.Text + "'", conn);
+                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT SID,Term,Year,Subject_name,Marks FROM subject  WHERE  SID = '" + SIDTB.Text + "'", conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 resultDGV.DataSource = dt;

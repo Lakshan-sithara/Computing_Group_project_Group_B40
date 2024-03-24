@@ -117,8 +117,8 @@ namespace Schoolmanagementsystem
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Addstudentmarks addstudentmarks = new Addstudentmarks();
-            addstudentmarks.Show();
+            Add_student_s_marks add_Student_S_Marks = new Add_student_s_marks();
+            add_Student_S_Marks.Show();
             this.Hide();
         }
 
