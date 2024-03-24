@@ -5,34 +5,19 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Schoolmanagementsystem
 {
-    public partial class Addstudenttimetable : Form
+    public partial class show_student_details : Form
     {
-        string server = "localhost";
-        string database = "sms_database";
-        string uid = "root";
-        string password = "";
-        string Grade;
         string Class;
-        public Addstudenttimetable()
+        string Grade;
+        public show_student_details()
         {
             InitializeComponent();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -80,40 +65,39 @@ namespace Schoolmanagementsystem
             Class = "D";
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
-            this.Hide();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Non_academic_profile non_Academic_Profile = new Non_academic_profile();
-            non_Academic_Profile.Show();
-            this.Hide();
-        }
+            string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
+            MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            string connString = "server=" + server + ";database=" + database + ";uid=" + uid + ";password=" + password;
-            MySqlConnection conn = new MySqlConnection(connString);
             try
             {
-                conn.Open();
-                //insert date to time_table
-                string insert = "INSERT INTO time_table (Time,Subject,Day,Grade,Class) VALUES ('"+ttDTP.Value+"','"+su1TB.Text+"','"+day1.Text+"','"+Grade+"','"+Class+"')";
-                MySqlCommand command = new MySqlCommand(insert, conn);
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
+                mySqlConnection.Open();
+                string Query = "SELECT * FROM student WHERE Grade = @Grade AND Class = @Class";
+                MySqlCommand command = new MySqlCommand(Query, mySqlConnection);
+                command.Parameters.AddWithValue("@Grade", Grade);
+                command.Parameters.AddWithValue("@Class", Class);
+
+                // Use ExecuteReader to get data from SELECT query
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    MessageBox.Show("Time table added successfully");
+                    MessageBox.Show("Student details retrieved successfully");
+
+                    // Load data into a DataTable to bind to DataGridView
+                    DataTable dt = new DataTable();
+                    dt.Load(reader);
+
+                    // Bind DataTable to DataGridView
+                    classDGV.DataSource = dt;
                 }
                 else
                 {
-                    MessageBox.Show("Time table not added");
+                    MessageBox.Show("No students found for the specified Grade and Class");
                 }
-                
+
+                reader.Close(); // Close the reader after use
             }
             catch (Exception ex)
             {
@@ -121,8 +105,16 @@ namespace Schoolmanagementsystem
             }
             finally
             {
-                conn.Close();
+                mySqlConnection.Close();
             }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+            this.Hide();
         }
     }
 }

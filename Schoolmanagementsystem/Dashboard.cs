@@ -29,15 +29,60 @@ namespace Schoolmanagementsystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Registerform registerForm = new Registerform();
+            registerForm.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Registerform registerForm = new Registerform();
+            registerForm.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Student_profile studentProfile = new Student_profile();
+            studentProfile.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Registerform registerForm = new Registerform();
+            registerForm.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Parent parent = new Parent();
+            parent.Show();
+            this.Hide();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
         {
 
         }
