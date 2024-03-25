@@ -13,6 +13,7 @@ namespace Schoolmanagementsystem
 {
     public partial class Student_profile : Form
     {
+        string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
         public Student_profile()
         {
             InitializeComponent();
@@ -138,37 +139,8 @@ namespace Schoolmanagementsystem
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string mySqlConn = "server=127.0.0.1;user=root;database=sms_database;password=";
-            MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn);
-            mySqlConnection.Open();
 
-            if (SIDTB.Text != "")
-            {
-                MySqlCommand command = new MySqlCommand("SELECT Name, Grade, Class, DOB, gender, Religion, Admission_date, Address FROM student WHERE SID = @student_id", mySqlConnection);
-                command.Parameters.AddWithValue("@student_id", SIDTB.Text);
 
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        nameTB.Text = reader.GetString("Name");
-                        gradeTB.Text = reader.GetString("Grade");
-                        classTB.Text = reader.GetString("Class");
-                        DOBTB.Text = reader.GetDateTime("DOB").ToString("yyyy-MM-dd"); // Convert DateTime to string with desired format
-                        genderTB.Text = reader.GetString("gender");
-                        religionTB.Text = reader.GetString("Religion");
-                        admissonTB.Text = reader.GetDateTime("Admission_date").ToString("yyyy-MM-dd"); // Convert DateTime to string with desired format
-                        addressTB.Text = reader.GetString("Address");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Student ID not found");
-                    }
-                }
-            }
-
-            mySqlConnection.Close();
-            
         }
 
         private void Student_profile_Load(object sender, EventArgs e)
@@ -199,6 +171,23 @@ namespace Schoolmanagementsystem
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection mySqlConnection = new MySqlConnection(mySqlConn))
+            {
+                mySqlConnection.Open();
+                string query = "SELECT * FROM student WHERE SID=@SID";
+                MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
+                cmd.Parameters.AddWithValue("@SID", SIDTB.Text);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
         }
     }
 }

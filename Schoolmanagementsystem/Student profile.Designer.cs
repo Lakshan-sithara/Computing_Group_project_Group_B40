@@ -37,24 +37,10 @@
             panel3 = new Panel();
             button9 = new Button();
             panel4 = new Panel();
-            addressTB = new TextBox();
-            admissonTB = new TextBox();
-            religionTB = new TextBox();
-            genderTB = new TextBox();
-            DOBTB = new TextBox();
-            classTB = new TextBox();
-            gradeTB = new TextBox();
-            nameTB = new TextBox();
+            dataGridView1 = new DataGridView();
+            button2 = new Button();
             SIDTB = new TextBox();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
             label2 = new Label();
-            label1 = new Label();
             pictureBox2 = new PictureBox();
             button7 = new Button();
             button8 = new Button();
@@ -63,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -163,24 +150,10 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(205, 243, 245);
-            panel4.Controls.Add(addressTB);
-            panel4.Controls.Add(admissonTB);
-            panel4.Controls.Add(religionTB);
-            panel4.Controls.Add(genderTB);
-            panel4.Controls.Add(DOBTB);
-            panel4.Controls.Add(classTB);
-            panel4.Controls.Add(gradeTB);
-            panel4.Controls.Add(nameTB);
+            panel4.Controls.Add(dataGridView1);
+            panel4.Controls.Add(button2);
             panel4.Controls.Add(SIDTB);
-            panel4.Controls.Add(label10);
-            panel4.Controls.Add(label9);
-            panel4.Controls.Add(label8);
-            panel4.Controls.Add(label7);
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(label4);
             panel4.Controls.Add(label2);
-            panel4.Controls.Add(label1);
             panel4.Location = new Point(403, 71);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
@@ -188,159 +161,34 @@
             panel4.TabIndex = 3;
             panel4.Paint += panel4_Paint;
             // 
-            // addressTB
+            // dataGridView1
             // 
-            addressTB.Location = new Point(166, 289);
-            addressTB.Margin = new Padding(3, 4, 3, 4);
-            addressTB.Name = "addressTB";
-            addressTB.Size = new Size(246, 27);
-            addressTB.TabIndex = 20;
-            addressTB.TextChanged += textBox9_TextChanged;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(35, 91);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(366, 221);
+            dataGridView1.TabIndex = 14;
             // 
-            // admissonTB
+            // button2
             // 
-            admissonTB.Location = new Point(166, 257);
-            admissonTB.Margin = new Padding(3, 4, 3, 4);
-            admissonTB.Name = "admissonTB";
-            admissonTB.Size = new Size(246, 27);
-            admissonTB.TabIndex = 19;
-            admissonTB.TextChanged += textBox8_TextChanged;
-            // 
-            // religionTB
-            // 
-            religionTB.Location = new Point(166, 223);
-            religionTB.Margin = new Padding(3, 4, 3, 4);
-            religionTB.Name = "religionTB";
-            religionTB.Size = new Size(246, 27);
-            religionTB.TabIndex = 18;
-            religionTB.TextChanged += textBox7_TextChanged;
-            // 
-            // genderTB
-            // 
-            genderTB.Location = new Point(166, 188);
-            genderTB.Margin = new Padding(3, 4, 3, 4);
-            genderTB.Name = "genderTB";
-            genderTB.Size = new Size(246, 27);
-            genderTB.TabIndex = 17;
-            genderTB.TextChanged += textBox6_TextChanged;
-            // 
-            // DOBTB
-            // 
-            DOBTB.Location = new Point(166, 153);
-            DOBTB.Margin = new Padding(3, 4, 3, 4);
-            DOBTB.Name = "DOBTB";
-            DOBTB.Size = new Size(246, 27);
-            DOBTB.TabIndex = 16;
-            DOBTB.TextChanged += textBox5_TextChanged;
-            // 
-            // classTB
-            // 
-            classTB.Location = new Point(166, 120);
-            classTB.Margin = new Padding(3, 4, 3, 4);
-            classTB.Name = "classTB";
-            classTB.Size = new Size(246, 27);
-            classTB.TabIndex = 15;
-            classTB.TextChanged += textBox4_TextChanged;
-            // 
-            // gradeTB
-            // 
-            gradeTB.Location = new Point(166, 87);
-            gradeTB.Margin = new Padding(3, 4, 3, 4);
-            gradeTB.Name = "gradeTB";
-            gradeTB.Size = new Size(246, 27);
-            gradeTB.TabIndex = 14;
-            gradeTB.TextChanged += textBox3_TextChanged;
-            // 
-            // nameTB
-            // 
-            nameTB.Location = new Point(166, 55);
-            nameTB.Margin = new Padding(3, 4, 3, 4);
-            nameTB.Name = "nameTB";
-            nameTB.Size = new Size(246, 27);
-            nameTB.TabIndex = 13;
-            nameTB.TextChanged += textBox2_TextChanged;
+            button2.Location = new Point(307, 25);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 13;
+            button2.Text = "Show";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // SIDTB
             // 
-            SIDTB.Location = new Point(166, 20);
+            SIDTB.Location = new Point(133, 23);
             SIDTB.Margin = new Padding(3, 4, 3, 4);
             SIDTB.Name = "SIDTB";
-            SIDTB.Size = new Size(246, 27);
+            SIDTB.Size = new Size(156, 27);
             SIDTB.TabIndex = 12;
             SIDTB.TextChanged += textBox1_TextChanged;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(24, 257);
-            label10.Name = "label10";
-            label10.Size = new Size(112, 20);
-            label10.TabIndex = 8;
-            label10.Text = "Admission date";
-            label10.Click += label10_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(24, 289);
-            label9.Name = "label9";
-            label9.RightToLeft = RightToLeft.Yes;
-            label9.Size = new Size(105, 20);
-            label9.TabIndex = 7;
-            label9.Text = "Home address";
-            label9.Click += label9_Click;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(24, 224);
-            label8.Name = "label8";
-            label8.Size = new Size(64, 20);
-            label8.TabIndex = 6;
-            label8.Text = "Religion";
-            label8.TextAlign = ContentAlignment.TopCenter;
-            label8.Click += label8_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(24, 192);
-            label7.Name = "label7";
-            label7.Size = new Size(57, 20);
-            label7.TabIndex = 5;
-            label7.Text = "Gender";
-            label7.TextAlign = ContentAlignment.TopCenter;
-            label7.Click += label7_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(24, 157);
-            label6.Name = "label6";
-            label6.Size = new Size(94, 20);
-            label6.TabIndex = 4;
-            label6.Text = "Date of birth";
-            label6.Click += label6_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(24, 124);
-            label5.Name = "label5";
-            label5.Size = new Size(42, 20);
-            label5.TabIndex = 3;
-            label5.Text = "Class";
-            label5.Click += label5_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(24, 91);
-            label4.Name = "label4";
-            label4.Size = new Size(49, 20);
-            label4.TabIndex = 2;
-            label4.Text = "Grade";
-            label4.Click += label4_Click;
             // 
             // label2
             // 
@@ -351,16 +199,6 @@
             label2.TabIndex = 1;
             label2.Text = "Enter your SID";
             label2.Click += label2_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(24, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Name";
-            label1.Click += label1_Click;
             // 
             // pictureBox2
             // 
@@ -426,6 +264,7 @@
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
@@ -442,25 +281,11 @@
         private PictureBox pictureBox2;
         private Button button7;
         private Button button8;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
         private Label label2;
-        private Label label1;
-        private TextBox addressTB;
-        private TextBox admissonTB;
-        private TextBox religionTB;
-        private TextBox genderTB;
-        private TextBox DOBTB;
-        private TextBox classTB;
-        private TextBox gradeTB;
-        private TextBox nameTB;
         private TextBox SIDTB;
         private Label label14;
         private Button button9;
+        private DataGridView dataGridView1;
+        private Button button2;
     }
 }
